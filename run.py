@@ -52,6 +52,7 @@ def count_hit_ships(board):
 
 
 create_ships(HIDDEN_BOARD)
+print_board(HIDDEN_BOARD)
 TURNS = 10
 while TURNS > 0:
     print("Welcome to battleships")
