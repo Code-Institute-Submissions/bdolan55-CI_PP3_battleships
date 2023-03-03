@@ -1,5 +1,7 @@
 import random
 
+LENGTH_OF_SHIPS = [5, 4, 3, 3, 2]
+
 
 class GameBoard:
     def __init__(self, board):
