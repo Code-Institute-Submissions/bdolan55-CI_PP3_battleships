@@ -9,7 +9,7 @@ class GameBoard:
         char_to_num = \
             {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6, "H": 7}
         return char_to_num
-        
+
     def print_board(self):
         print("  A B C D E F G H")
         print("  ---------------")
@@ -24,7 +24,7 @@ class Battleship:
         self.board = board
 
     def create_ships(self):
-        for i in range(5):
+        for create_ships in range(5):
             self.x_row, self.y_column = random.randint(0, 7),\
                 random.randint(0, 7)
             while self.board[self.x_row][self.y_column] == "X":
@@ -48,7 +48,7 @@ class Battleship:
         except ValueError and KeyError:
             print("Not a valid input")
         return self.get_user_input()
-                
+
     def count_hit_ships(self):
         hit_count = 0
         for row in self.board:
@@ -66,11 +66,12 @@ class RunGame():
     TURNS = 10
     while TURNS > 0:
         GameBoard.print_board(user_guess_board)
+        GameBoard.print_board(computer_board)
         # gets the Users input
         user_x_row, user_y_column = Battleship.get_user_input(object)
         # checks if the guess is not a duplicated selection
         while user_guess_board.board[user_x_row][user_y_column] == "-" or \
-            user_guess_board.board[user_x_row][user_y_column] == "X":
+                user_guess_board.board[user_x_row][user_y_column] == "X":
             print("You guess those spaces already")
             user_x_row, user_y_column = Battleship.get_user_input(object)
         # Check to see for a Hit or miss from your guess
@@ -93,28 +94,5 @@ class RunGame():
                 break
 
 
-if __name__ == "__main":
+if __name__ == "__main__":
     RunGame()
-# TURNS = 10
-# while TURNS > 0:
-#     print("Welcome to battleships")
-#     print_board(GUESS_BOARD)
-#     row, column = get_ship_location()
-#     if GUESS_BOARD[row][column] == "-":
-#         print("You already guessed that")
-#     elif HIDDEN_BOARD[row][column] == "X":
-#         print("Congrats --- You have a hit")
-#         GUESS_BOARD[row][column] = "X"
-#         TURNS -= 1
-#     else:
-#         print("YOU MISSED")
-#         GUESS_BOARD[row][column] = "-"
-#         TURNS -= 1
-#     if count_hit_ships(GUESS_BOARD) == 5:
-#         print("Congrats, You sunk all the battleships")
-#         break
-#         print("You have " + str(TURNS) + "turns remaining")
-#     if TURNS == 0:
-#         print("Games Over you ran out of turns.")
-#         break
-
