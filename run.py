@@ -1,9 +1,16 @@
 import random
 
-LENGTH_OF_SHIPS = [5, 4, 3, 3, 2]
+
+class welcome_screen():
+    print("--------------------------")
+    print("  Welcome to Battleship   ")
+    print("--------------------------")
+
+    input("Enter name here")
 
 
 class GameBoard:
+
     def __init__(self, board):
         self.board = board
 
@@ -96,5 +103,10 @@ class RunGame():
                 break
 
 
-if __name__ == "__main__":
+def main_game_run():
+    welcome_screen()
     RunGame()
+
+
+if __name__ == "__main__":
+    main_game_run()
