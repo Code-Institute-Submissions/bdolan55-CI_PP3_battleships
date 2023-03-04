@@ -1,0 +1,8 @@
+print("Battleship is a war-themed board game for two players in")
+print("which the opponents try to guess the location of their opponent's") 
+print("warships and sink them. A paper and pencil version of the game dates")
+print("back to World War I, but most people are familiar with the game through") 
+print("the plastic board game that was first marketed by the Milton Bradley Company") 
+print("in 1967. Since then, the game has spawned various video games and smartphone") 
+print("app variations. Today, the board game version is produced by Hasbro, the") 
+print("company that acquired Milton Bradley in 1984.")

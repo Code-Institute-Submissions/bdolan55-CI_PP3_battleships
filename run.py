@@ -2,11 +2,37 @@ import random
 
 
 class welcome_screen():
+
     print("--------------------------")
     print("  Welcome to Battleship   ")
     print("--------------------------")
+    name = input("Enter name here: ")
+    print(f"Welcome to the game of Battleships {name} ")
+    print("What would you like to do?")
+    print("1. Play Game")
+    print("2. Read Rules")
+    print("3. Look at Leaderboard")
 
-    input("Enter name here")
+    choice = input("Enter your choice (1, 2, or 3): ")
+
+    if choice == "1":
+        print("gaembutton 1")
+    elif choice == "2":
+        print("gaembutton 2")
+    elif choice == "3":
+        print("gaembutton 3")
+    else:
+        print("Invalid choice. Please enter 1, 2, or 3.")
+
+
+def read_rules():
+    with open("rules.txt", "r") as f:
+        rules = f.read()
+        print(rules)
+
+
+def look_at_leaderboard():
+    print("Displaying leaderboard...")
 
 
 class GameBoard:
