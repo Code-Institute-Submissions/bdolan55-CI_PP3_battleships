@@ -6,23 +6,30 @@ class welcome_screen():
     print("--------------------------")
     print("  Welcome to Battleship   ")
     print("--------------------------")
-    name = input("Enter name here: ")
+
+    while True:
+        name = input("Enter name here: ")
+        if not name.isalpha():
+            print("Invalid Input. Please use letters for your name")
+        else:
+            break
     print(f"Welcome to the game of Battleships {name} ")
     print("What would you like to do?")
     print("1. Play Game")
     print("2. Read Rules")
     print("3. Look at Leaderboard")
-
     choice = input("Enter your choice (1, 2, or 3): ")
-
     if choice == "1":
-        print("gaembutton 1")
+        print("gaembutton 2")
     elif choice == "2":
         print("gaembutton 2")
     elif choice == "3":
         print("gaembutton 3")
     else:
         print("Invalid choice. Please enter 1, 2, or 3.")
+        while choice not in "1,2,3":
+            print("Inavlid Choice....")
+            choice = input("Enter your choice (1, 2, or 3): ")
 
 
 def read_rules():
@@ -131,6 +138,7 @@ class RunGame():
 
 def main_game_run():
     welcome_screen()
+    game_menu()
     RunGame()
 
 
