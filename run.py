@@ -3,9 +3,21 @@ import random
 
 class welcome_screen():
 
-    print("--------------------------")
-    print("  Welcome to Battleship   ")
-    print("--------------------------")
+    print("-----------------------------------------")
+    print("          Welcome to Battleship          ")
+    print("-----------------------------------------")
+    print("                                         ")
+    print("                                         ")
+    print("                                         ")
+    print("             |    |    |                 ")
+    print("            )_)  )_)  )_)                ")
+    print("           )___))___))___)               ")
+    print("          )____)____)_____)              ")
+    print("        _____|____|____|______           ")
+    print("--------\                    /-----------")
+    print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+    print("      ^^^^      ^^^^     ^^^    ^^       ")
+    print("^^^^^     ^^^^      ^^^     ^^^^^    ^^^^")
 
     while True:
         name = input("Enter name here: ")
@@ -20,7 +32,7 @@ class welcome_screen():
     print("3. Look at Leaderboard")
     choice = input("Enter your choice (1, 2, or 3): ")
     if choice == "1":
-        print("gaembutton 2")
+        print("gaembutton 1")
     elif choice == "2":
         print("gaembutton 2")
     elif choice == "3":
@@ -138,7 +150,6 @@ class RunGame():
 
 def main_game_run():
     welcome_screen()
-    game_menu()
     RunGame()
 
 
