@@ -42,7 +42,7 @@ class welcome_screen():
             print("Invalid Input. Please use letters for your name")
         else:
             break
-        print(f"Welcome to the game of Battleships {name} ")       
+        print(f"Welcome to the game of Battleships {name} ")
 
     def display_menu(self):
         print("What would you like to do?")
@@ -53,7 +53,7 @@ class welcome_screen():
     def handle_choice(self, choice):
         if choice == "1":
             print("Loading Game", end="")
-            for i in range(15):
+            for choice in range(15):
                 time.sleep(.5)
                 print(".", end="", flush=True)
             self.run_game()
@@ -95,7 +95,7 @@ menu = welcome_screen()
 menu.display_menu()
 menu.get_choice()
 
-            
+
 class GameBoard:
 
     def __init__(self, board):
@@ -198,5 +198,4 @@ def main_game_run():
     RunGame()
 
 
-# if __name__ == "__main__":
 main_game_run()
