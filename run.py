@@ -1,6 +1,14 @@
 import random
 
 
+def read_rules():
+    with open("rules.txt", "r") as f:
+        print(f.read())
+
+
+def look_at_leaderboard():
+    print("Displaying leaderboard...")
+
 class welcome_screen():
 
     print("-----------------------------------------")
@@ -32,28 +40,20 @@ class welcome_screen():
     print("3. Look at Leaderboard")
     choice = input("Enter your choice (1, 2, or 3): ")
     if choice == "1":
-        print("gaembutton 1")
+        RunGame()
     elif choice == "2":
-        print("gaembutton 2")
+        read_rules()
+        input("Return to menu??")
     elif choice == "3":
-        print("gaembutton 3")
+        look_at_leaderboard()
+        input("Return to menu??")
     else:
         print("Invalid choice. Please enter 1, 2, or 3.")
         while choice not in "1,2,3":
             print("Inavlid Choice....")
             choice = input("Enter your choice (1, 2, or 3): ")
 
-
-def read_rules():
-    with open("rules.txt", "r") as f:
-        rules = f.read()
-        print(rules)
-
-
-def look_at_leaderboard():
-    print("Displaying leaderboard...")
-
-
+            
 class GameBoard:
 
     def __init__(self, board):
