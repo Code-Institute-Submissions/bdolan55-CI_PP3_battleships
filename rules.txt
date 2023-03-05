@@ -1,8 +1,18 @@
-print("Battleship is a war-themed board game for two players in")
-print("which the opponents try to guess the location of their opponent's") 
-print("warships and sink them. A paper and pencil version of the game dates")
-print("back to World War I, but most people are familiar with the game through") 
-print("the plastic board game that was first marketed by the Milton Bradley Company") 
-print("in 1967. Since then, the game has spawned various video games and smartphone") 
-print("app variations. Today, the board game version is produced by Hasbro, the") 
-print("company that acquired Milton Bradley in 1984.")
+
+
+Rules
+
+
+Battleship is a classic board game that involves a grid of squares representing the ocean. 
+The objective of the game is to sink all of your opponent's ships within the 10 turns allowed.
+
+Here are the basic rules of the Battleship game:
+
+If a player's guess hits a part of their computers ship, it will be announced that the ship has been hit. 
+The players grid will be marked with an "X" when a ship is hit and marked with "-" when it is a missed missile.
+
+The player will guess up to 10 times to sink all 5 of the computers ships. 
+
+In summary, Battleship is a game of strategy, deduction and a bit of luck. 
+Players must try to guess the location of their opponent's ships. The game requires careful planning and strategic 
+thinking to outsmart your opponent and emerge victorious.

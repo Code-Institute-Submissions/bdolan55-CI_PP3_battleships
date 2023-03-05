@@ -1,4 +1,5 @@
 import random
+import time
 
 import gspread
 from google.oauth2.service_account import Credentials
@@ -34,7 +35,7 @@ class welcome_screen():
     print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
     print("      ^^^^      ^^^^     ^^^    ^^       ")
     print("^^^^^     ^^^^      ^^^     ^^^^^    ^^^^")
-
+    time.sleep(2)
     while True:
         name = input("Enter name here: \n")
         if not name.isalpha():
@@ -51,6 +52,10 @@ class welcome_screen():
 
     def handle_choice(self, choice):
         if choice == "1":
+            print("Loading Game", end="")
+            for i in range(15):
+                time.sleep(.5)
+                print(".", end="", flush=True)
             self.run_game()
         elif choice == "2":
             self.read_rules()
@@ -73,7 +78,8 @@ class welcome_screen():
         self.handle_choice(choice)
 
     def run_game(self):
-        print("Starting game...")
+        print("Loading Complete...")
+        time.sleep(2)
 
     def read_rules(self):
         with open("rules.txt", "r") as f:
@@ -124,20 +130,23 @@ class Battleship:
         return self.board
 
     def get_user_input(self):
-        try:
-            x_row = input("Please enter a ship row 1-8: \n")
-            while x_row not in "12345678":
-                print("Please enter a valid row")
-                x_row = input("Please enter ship row 1-8: \n")
+        while True:
+            try:
+                x_row = input("Please enter a ship row 1-8: \n")
+                while x_row not in "12345678":
+                    print("Please enter a valid row")
+                    x_row = input("Please enter ship row 1-8: \n")
 
-            y_column = input("Please enter a ship column A-H: \n").upper()
-            while y_column not in "ABCDEFGH":
-                print("Please enter a valid column: ")
                 y_column = input("Please enter a ship column A-H: \n").upper()
-            return int(x_row) - 1, GameBoard.get_char_to_num()[y_column]
-        except ValueError and KeyError:
-            print("Not a valid input")
-        return self.get_user_input()
+                while y_column not in "ABCDEFGH":
+                    print("Please enter a valid column: ")
+                    y_column = input("Please enter a ship column A-H: \n")\
+                        .upper()
+
+                return int(x_row) - 1, GameBoard.get_char_to_num()[y_column]
+
+            except (ValueError, KeyError):
+                print("Not a valid input")
 
     def count_hit_ships(self):
         hit_count = 0
@@ -189,5 +198,5 @@ def main_game_run():
     RunGame()
 
 
-if __name__ == "__main__":
-    main_game_run()
+# if __name__ == "__main__":
+main_game_run()
