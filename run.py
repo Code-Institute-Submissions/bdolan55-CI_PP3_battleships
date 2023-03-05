@@ -36,7 +36,7 @@ class welcome_screen():
     print("^^^^^     ^^^^      ^^^     ^^^^^    ^^^^")
 
     while True:
-        name = input("Enter name here: ")
+        name = input("Enter name here: \n")
         if not name.isalpha():
             print("Invalid Input. Please use letters for your name")
         else:
@@ -54,22 +54,22 @@ class welcome_screen():
             self.run_game()
         elif choice == "2":
             self.read_rules()
-            input("Press Enter to Return to menu")
+            input("Press Enter to Return to menu \n")
             self.display_menu()
             self.get_choice()
         elif choice == "3":
             self.look_at_leaderboard()
-            input("Press Enter to Return to menu")
+            input("Press Enter to Return to menu \n")
             self.display_menu()
             self.get_choice()
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
-            input("Press Enter to try again")
+            input("Press Enter to try again \n")
             self.display_menu()
             self.get_choice()
 
     def get_choice(self):
-        choice = input("Enter your choice (1, 2, or 3): ")
+        choice = input("Enter your choice (1, 2, or 3): \n")
         self.handle_choice(choice)
 
     def run_game(self):
@@ -125,15 +125,15 @@ class Battleship:
 
     def get_user_input(self):
         try:
-            x_row = input("Please enter a ship row 1-8: ")
+            x_row = input("Please enter a ship row 1-8: \n")
             while x_row not in "12345678":
                 print("Please enter a valid row")
-                x_row = input("Please enter ship row 1-8: ")
+                x_row = input("Please enter ship row 1-8: \n")
 
-            y_column = input("Please enter a ship column A-H: ").upper()
+            y_column = input("Please enter a ship column A-H: \n").upper()
             while y_column not in "ABCDEFGH":
                 print("Please enter a valid column: ")
-                y_column = input("Please enter a ship column A-H: ").upper()
+                y_column = input("Please enter a ship column A-H: \n").upper()
             return int(x_row) - 1, GameBoard.get_char_to_num()[y_column]
         except ValueError and KeyError:
             print("Not a valid input")
