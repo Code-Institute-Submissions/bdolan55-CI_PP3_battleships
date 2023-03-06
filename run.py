@@ -1,8 +1,12 @@
 import random
 import time
-
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
 import gspread
 from google.oauth2.service_account import Credentials
+
+
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -22,7 +26,7 @@ class welcome_screen():
         pass
 
     print("-----------------------------------------")
-    print("          Welcome to Battleship          ")
+    print(Fore.RED + "          Welcome to Battleship          ")
     print("-----------------------------------------\n")
     print("                                         \n")
     print("                                         ")
@@ -31,28 +35,28 @@ class welcome_screen():
     print("           )___))___))___)               ")
     print("          )____)____)_____)              ")
     print("        _____|____|____|______           ")
-    print("--------\                    /-----------")
-    print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
-    print("      ^^^^      ^^^^     ^^^    ^^       ")
-    print("^^^^^     ^^^^      ^^^     ^^^^^    ^^^^")
-    time.sleep(2)
+    print("        \                    /           ")
+    print(Fore.BLUE + "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+    print(Fore.BLUE + "      ^^^^      ^^^^     ^^^    ^^       ")
+    print(Fore.BLUE + "^^^^^     ^^^^      ^^^     ^^^^^    ^^^^")
+    time.sleep(.5)
     while True:
-        name = input("Enter name here: \n")
+        name = input(Fore.GREEN + "Enter name here: \n")
         if not name.isalpha():
-            print("Invalid Input. Please use letters for your name")
+            print(Fore.RED + "Invalid Input. Please use letters for your name")
         else:
             break
-        print(f"Welcome to the game of Battleships {name} ")
+        print(f"{Fore.GREEN}Welcome to the game of Battleships {name} ")
 
     def display_menu(self):
-        print("What would you like to do?")
+        print(Fore.WHITE + "What would you like to do?")
         print("1. Play Game")
         print("2. Read Rules")
         print("3. Look at Leaderboard")
 
     def handle_choice(self, choice):
         if choice == "1":
-            print("Loading Game", end="")
+            print(Fore.YELLOW + "Loading Game", end="")
             for choice in range(15):
                 time.sleep(.5)
                 print(".", end="", flush=True)
@@ -68,7 +72,7 @@ class welcome_screen():
             self.display_menu()
             self.get_choice()
         else:
-            print("Invalid choice. Please enter 1, 2, or 3.")
+            print(Fore.RED + "Invalid choice. Please enter 1, 2, or 3.")
             input("Press Enter to try again \n")
             self.display_menu()
             self.get_choice()
@@ -78,7 +82,7 @@ class welcome_screen():
         self.handle_choice(choice)
 
     def run_game(self):
-        print("Loading Complete...")
+        print(Fore.GREEN + "\nLoading Complete!! \n")
         time.sleep(2)
 
     def read_rules(self):
@@ -146,7 +150,7 @@ class Battleship:
                 return int(x_row) - 1, GameBoard.get_char_to_num()[y_column]
 
             except (ValueError, KeyError):
-                print("Not a valid input")
+                print(Fore.RED + "Not a valid input")
 
     def count_hit_ships(self):
         hit_count = 0
@@ -171,24 +175,24 @@ class RunGame():
         # checks if the guess is not a duplicated selection
         while user_guess_board.board[user_x_row][user_y_column] == "-" or \
                 user_guess_board.board[user_x_row][user_y_column] == "X":
-            print("You guess those spaces already")
+            print(Fore.YELLOW + "You guess those spaces already")
             user_x_row, user_y_column = Battleship.get_user_input(object)
         # Check to see for a Hit or miss from your guess
         if computer_board.board[user_x_row][user_y_column] == "X":
-            print("You sunk 1 of my battleships!!!")
+            print(Fore.GREEN + "You sunk 1 of my battleships!!!")
             user_guess_board.board[user_x_row][user_y_column] = "X"
         else:
-            print("You missed my battleship!")
+            print(Fore.RED + "You missed my battleship!")
             user_guess_board.board[user_x_row][user_y_column] = "-"
         # check for win or lose
         if Battleship.count_hit_ships(user_guess_board) == 5:
-            print("You hit all my battleships!!")
+            print(Fore.GREEN + "You hit all my battleships!!")
             break
         else:
             TURNS -= 1
-            print(f"You have {TURNS} turns remaining")
+            print(f"{Fore.BLUE}You have {TURNS} turns remaining")
             if TURNS == 0:
-                print("Game Over - No turns left")
+                print(Fore.RED + "Game Over - No turns left")
                 GameBoard.print_board(user_guess_board)
                 break
 
