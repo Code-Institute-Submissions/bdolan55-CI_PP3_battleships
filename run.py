@@ -152,6 +152,10 @@ class Battleship:
             except (ValueError, KeyError):
                 print(Fore.RED + "Not a valid input")
 
+    def get_comp_guess(self):
+        x_row, y_column = random.randint(0, 7), random.randint(0, 7)
+        return x_row, y_column
+
     def count_hit_ships(self):
         hit_count = 0
         for row in self.board:
@@ -165,6 +169,7 @@ class RunGame():
     computer_board = GameBoard([[" "] * 8 for i in range(8)])
     user_guess_board = GameBoard([[" "] * 8 for i in range(8)])
     Battleship.create_ships(computer_board)
+    Battleship.create_ships(user_guess_board)
     # starts the game with 10 available turns
     TURNS = 10
     while TURNS > 0:
@@ -187,7 +192,31 @@ class RunGame():
         # check for win or lose
         if Battleship.count_hit_ships(user_guess_board) == 5:
             print(Fore.GREEN + "You hit all my battleships!!")
+        # Computers turn   
+        print("Now its the computers turn....")
+        comp_x_row, comp_y_column = Battleship.get_comp_guess(computer_board)
+        print(f"Computer Guessed Row {comp_x_row+1},column {comp_y_column}")
+
+        if user_guess_board.board[comp_x_row][comp_y_column] == "X":
+            print("The computer sunk 1 of your Battleships!!")
+            # computer_board.board[comp_x_row][comp_y_column] == "X"
+            GameBoard.print_board(user_guess_board)
+            Battleship.get_user_input(object)
+            
+        else:
+            print("The Computer missed your Battleship")
+            computer_board.board[comp_x_row][comp_y_column] = "-"
+            GameBoard.print_board(user_guess_board)
+            Battleship.get_user_input(object)
+
+        if Battleship.count_hit_ships(user_guess_board) == 5:
+            print("You hit all my ships!!")
             break
+
+        elif Battleship.count_hit_ships(computer_board) == 5:
+            print("The computer hit all your ships!!")
+            break
+
         else:
             TURNS -= 1
             print(f"{Fore.BLUE}You have {TURNS} turns remaining")
