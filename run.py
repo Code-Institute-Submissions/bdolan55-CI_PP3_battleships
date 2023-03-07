@@ -155,6 +155,11 @@ class Battleship:
     #     x_row, y_column = random.randint(0, 7), random.randint(0, 7)
     #     return x_row, y_column
 
+    def get_computer_input():
+        row = random.randint(0, 7)
+        col = random.randint(0, 7)
+        return row, col
+
     def count_hit_ships(self):
         hit_count = 0
         for row in self.board:
@@ -198,6 +203,25 @@ class RunGame():
                 print(Fore.RED + "Game Over - No turns left")
                 GameBoard.print_board(user_guess_board)
                 break
+
+        # Computer's turn
+        computer_x_row, computer_y_column = Battleship.get_computer_input()
+        print(f"Computer guessed \
+             {chr(computer_y_column + 65)}{computer_x_row + 1}")
+
+        if user_guess_board.board[computer_x_row][computer_y_column] == "X":
+            print(Fore.RED + "I already guessed that!")
+        elif computer_board.board[computer_x_row][computer_y_column] == "X":
+            print(Fore.RED + "I hit one of your battleships!")
+            user_guess_board.board[computer_x_row][computer_y_column] = "X"
+            # check for win or lose
+            if Battleship.count_hit_ships(user_guess_board) == 5:
+                print(Fore.RED + "Game Over - I hit all your battleships!")
+                GameBoard.print_board(user_guess_board)
+                break
+        else:
+            print(Fore.YELLOW + "I missed!")
+            user_guess_board.board[computer_x_row][computer_y_column] = "-"
         # # Computers turn   
         # print("Now its the computers turn....")
         # comp_x_row, comp_y_column = Battleship.get_comp_guess(computer_board)
