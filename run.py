@@ -1,12 +1,10 @@
 import random
 import time
 import colorama
-from colorama import Fore, Back, Style
-colorama.init(autoreset=True)
+from colorama import Fore
 import gspread
 from google.oauth2.service_account import Credentials
-
-
+colorama.init(autoreset=True)
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -57,7 +55,7 @@ class welcome_screen():
     def handle_choice(self, choice):
         if choice == "1":
             print(Fore.YELLOW + "Loading Game", end="")
-            for choice in range(15):
+            for choice in range(1):
                 time.sleep(.5)
                 print(".", end="", flush=True)
             self.run_game()
@@ -101,7 +99,6 @@ menu.get_choice()
 
 
 class GameBoard:
-
     def __init__(self, board):
         self.board = board
 
@@ -124,7 +121,7 @@ class Battleship:
         self.board = board
 
     def create_ships(self):
-        for create_ships in range(5):
+        for i in range(5):
             self.x_row, self.y_column = random.randint(0, 7),\
                 random.randint(0, 7)
             while self.board[self.x_row][self.y_column] == "X":
@@ -134,27 +131,28 @@ class Battleship:
         return self.board
 
     def get_user_input(self):
-        while True:
-            try:
-                x_row = input("Please enter a ship row 1-8: \n")
-                while x_row not in "12345678":
-                    print("Please enter a valid row")
-                    x_row = input("Please enter ship row 1-8: \n")
+        # while True:
+        try:
+            x_row = input("Please enter a ship row 1-8: \n")
+            while x_row not in "12345678":
+                print("Please enter a valid row")
+                x_row = input("Please enter ship row 1-8: \n")
 
-                y_column = input("Please enter a ship column A-H: \n").upper()
-                while y_column not in "ABCDEFGH":
-                    print("Please enter a valid column: ")
-                    y_column = input("Please enter a ship column A-H: \n")\
-                        .upper()
+            y_column = input("Please enter a ship column A-H: \n").upper()
+            while y_column not in "ABCDEFGH":
+                print("Please enter a valid column: ")
+                y_column = input("Please enter a ship column A-H: \n")\
+                    .upper()
 
-                return int(x_row) - 1, GameBoard.get_char_to_num()[y_column]
+            return int(x_row) - 1, GameBoard.get_char_to_num()[y_column]
 
-            except (ValueError, KeyError):
-                print(Fore.RED + "Not a valid input")
+        except (ValueError, KeyError):
+            print(Fore.RED + "Not a valid input")
+            return self.get_user_input()
 
-    def get_comp_guess(self):
-        x_row, y_column = random.randint(0, 7), random.randint(0, 7)
-        return x_row, y_column
+    # def get_comp_guess(self):
+    #     x_row, y_column = random.randint(0, 7), random.randint(0, 7)
+    #     return x_row, y_column
 
     def count_hit_ships(self):
         hit_count = 0
@@ -169,12 +167,11 @@ class RunGame():
     computer_board = GameBoard([[" "] * 8 for i in range(8)])
     user_guess_board = GameBoard([[" "] * 8 for i in range(8)])
     Battleship.create_ships(computer_board)
-    Battleship.create_ships(user_guess_board)
+    # Battleship.create_ships(user_guess_board)
     # starts the game with 10 available turns
     TURNS = 10
     while TURNS > 0:
         GameBoard.print_board(user_guess_board)
-        GameBoard.print_board(computer_board)
         # gets the Users input
         user_x_row, user_y_column = Battleship.get_user_input(object)
         # checks if the guess is not a duplicated selection
@@ -192,31 +189,7 @@ class RunGame():
         # check for win or lose
         if Battleship.count_hit_ships(user_guess_board) == 5:
             print(Fore.GREEN + "You hit all my battleships!!")
-        # Computers turn   
-        print("Now its the computers turn....")
-        comp_x_row, comp_y_column = Battleship.get_comp_guess(computer_board)
-        print(f"Computer Guessed Row {comp_x_row+1},column {comp_y_column}")
-
-        if user_guess_board.board[comp_x_row][comp_y_column] == "X":
-            print("The computer sunk 1 of your Battleships!!")
-            # computer_board.board[comp_x_row][comp_y_column] == "X"
-            GameBoard.print_board(user_guess_board)
-            Battleship.get_user_input(object)
-            
-        else:
-            print("The Computer missed your Battleship")
-            computer_board.board[comp_x_row][comp_y_column] = "-"
-            GameBoard.print_board(user_guess_board)
-            Battleship.get_user_input(object)
-
-        if Battleship.count_hit_ships(user_guess_board) == 5:
-            print("You hit all my ships!!")
             break
-
-        elif Battleship.count_hit_ships(computer_board) == 5:
-            print("The computer hit all your ships!!")
-            break
-
         else:
             TURNS -= 1
             print(f"{Fore.BLUE}You have {TURNS} turns remaining")
@@ -224,11 +197,37 @@ class RunGame():
                 print(Fore.RED + "Game Over - No turns left")
                 GameBoard.print_board(user_guess_board)
                 break
+        # # Computers turn   
+        # print("Now its the computers turn....")
+        # comp_x_row, comp_y_column = Battleship.get_comp_guess(computer_board)
+        # print(f"Computer Guessed Row {comp_x_row+1},column {comp_y_column}")
 
+        # if user_guess_board.board[comp_x_row][comp_y_column] == "X":
+        #     print("The computer sunk 1 of your Battleships!!")
+        #     # computer_board.board[comp_x_row][comp_y_column] == "X"
+        #     GameBoard.print_board(user_guess_board)
+        #     Battleship.get_user_input(object)
+            
+        # else:
+        #     print("The Computer missed your Battleship")
+        #     computer_board.board[comp_x_row][comp_y_column] = "-"
+        #     GameBoard.print_board(user_guess_board)
+        #     Battleship.get_user_input(object)
+
+        # if Battleship.count_hit_ships(user_guess_board) == 5:
+        #     print("You hit all my ships!!")
+        #     break
+
+        # elif Battleship.count_hit_ships(computer_board) == 5:
+        #     print("The computer hit all your ships!!")
+        #     break
+        
 
 def main_game_run():
     welcome_screen()
     RunGame()
 
 
-main_game_run()
+if __name__ == "__main__":
+
+    main_game_run()
