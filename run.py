@@ -162,9 +162,6 @@ class Battleship:
             except (ValueError, KeyError):
                 print(Fore.RED + "Not a valid input")
 
-    # def get_comp_guess(self):
-    #     x_row, y_column = random.randint(0, 7), random.randint(0, 7)
-    #     return x_row, y_column
     @staticmethod
     def get_computer_input():
         row = random.randint(0, 7)
@@ -190,8 +187,6 @@ class RunGame():
     TURNS = 10
     while TURNS > 0:
         GameBoard.print_board(player_guess_board)
-        # GameBoard.print_board(user_guess_board)
-        # GameBoard.print_board(computer_board)
         # gets the Users input
         user_x_row, user_y_column = Battleship.get_user_input(object)
         # checks if the guess is not a duplicated selection
@@ -218,7 +213,6 @@ class RunGame():
             if TURNS == 0:
                 print(Fore.RED + "Game Over - No turns left")
                 GameBoard.print_board(user_guess_board)
-                print(f"")
                 break
 
         # Computer's turn
@@ -227,7 +221,7 @@ class RunGame():
         print(Fore.GREEN + "------------------------------")
         computer_x_row, computer_y_column = Battleship.get_computer_input()
         print(f"Computer guessed \
-             {chr(computer_y_column + 65)}{computer_x_row + 1}")
+             {computer_x_row + 1}{chr(computer_y_column + 65)}")
 
         while computer_board.board[computer_x_row][computer_y_column] == "-"\
                 or computer_board.board[computer_x_row][computer_y_column]\
@@ -244,32 +238,8 @@ class RunGame():
             break
         else:
             print(Fore.YELLOW + "I missed!")
-            computer_board.board[computer_x_row][computer_y_column] = "-"
-        # # Computers turn   
-        # print("Now its the computers turn....")
-        # comp_x_row, comp_y_column = Battleship.get_comp_guess(computer_board)
-        # print(f"Computer Guessed Row {comp_x_row+1},column {comp_y_column}")
+            computer_board.board[computer_x_row][computer_y_column] = "-"        
 
-        # if user_guess_board.board[comp_x_row][comp_y_column] == "X":
-        #     print("The computer sunk 1 of your Battleships!!")
-        #     # computer_board.board[comp_x_row][comp_y_column] == "X"
-        #     GameBoard.print_board(user_guess_board)
-        #     Battleship.get_user_input(object)
-            
-        # else:
-        #     print("The Computer missed your Battleship")
-        #     computer_board.board[comp_x_row][comp_y_column] = "-"
-        #     GameBoard.print_board(user_guess_board)
-        #     Battleship.get_user_input(object)
-
-        # if Battleship.count_hit_ships(user_guess_board) == 5:
-        #     print("You hit all my ships!!")
-        #     break
-
-        # elif Battleship.count_hit_ships(computer_board) == 5:
-        #     print("The computer hit all your ships!!")
-        #     break
-        
 
 def main_game_run():
     welcome_screen()
