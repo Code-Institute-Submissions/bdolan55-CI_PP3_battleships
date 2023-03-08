@@ -154,7 +154,7 @@ class Battleship:
     # def get_comp_guess(self):
     #     x_row, y_column = random.randint(0, 7), random.randint(0, 7)
     #     return x_row, y_column
-
+    @staticmethod
     def get_computer_input():
         row = random.randint(0, 7)
         col = random.randint(0, 7)
@@ -211,7 +211,7 @@ class RunGame():
              {chr(computer_y_column + 65)}{computer_x_row + 1}")
 
         if computer_board.board[computer_x_row][computer_y_column] == "-" or \
-                computer_board.board[computer_x_row][computer_y_column == "X"]:
+                computer_board.board[computer_x_row][computer_y_column] == "X":
             print(Fore.RED + "I already guessed that!")
             computer_x_row, computer_y_column = Battleship.get_computer_input()
         elif user_guess_board.board[computer_x_row][computer_y_column] == "X":
