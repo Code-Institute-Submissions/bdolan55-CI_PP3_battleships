@@ -178,6 +178,7 @@ class RunGame():
     TURNS = 10
     while TURNS > 0:
         GameBoard.print_board(user_guess_board)
+        GameBoard.print_board(computer_board)
         # gets the Users input
         user_x_row, user_y_column = Battleship.get_user_input(object)
         # checks if the guess is not a duplicated selection
@@ -209,19 +210,21 @@ class RunGame():
         print(f"Computer guessed \
              {chr(computer_y_column + 65)}{computer_x_row + 1}")
 
-        if user_guess_board.board[computer_x_row][computer_y_column] == "X":
+        if computer_board.board[computer_x_row][computer_y_column] == "-" or \
+                computer_board.board[computer_x_row][computer_y_column == "X"]:
             print(Fore.RED + "I already guessed that!")
-        elif computer_board.board[computer_x_row][computer_y_column] == "X":
+            computer_x_row, computer_y_column = Battleship.get_computer_input()
+        elif user_guess_board.board[computer_x_row][computer_y_column] == "X":
             print(Fore.RED + "I hit one of your battleships!")
-            user_guess_board.board[computer_x_row][computer_y_column] = "X"
+            computer_board.board[computer_x_row][computer_y_column] = "X"
             # check for win or lose
-            if Battleship.count_hit_ships(user_guess_board) == 5:
+            if Battleship.count_hit_ships(computer_board) == 5:
                 print(Fore.RED + "Game Over - I hit all your battleships!")
-                GameBoard.print_board(user_guess_board)
+                GameBoard.print_board(computer_board)
                 break
         else:
             print(Fore.YELLOW + "I missed!")
-            user_guess_board.board[computer_x_row][computer_y_column] = "-"
+            computer_board.board[computer_x_row][computer_y_column] = "-"
         # # Computers turn   
         # print("Now its the computers turn....")
         # comp_x_row, comp_y_column = Battleship.get_comp_guess(computer_board)
