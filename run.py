@@ -211,7 +211,19 @@ class RunGame():
             TURNS -= 1
             print(f"{Fore.BLUE}You have {TURNS} turns remaining")
             if TURNS == 0:
-                print(Fore.RED + "Game Over - No turns left")
+                print("--------------------------------------")
+                print(Fore.RED + "       Game Over - No turns left")
+                print("--------------------------------------")
+                print(" ")
+                print("Player with the most Ship Hits wins!!!")
+                print(" ")
+                score_1 = Battleship.count_hit_ships(user_guess_board)
+                print(Fore.GREEN + "Player Score: " + str(score_1))
+                score_2 = Battleship.count_hit_ships(computer_board)
+                print(Fore.GREEN + "Computer Score: " + str(score_2))
+                print("")
+                print("See loactions of the Players missed ships below!")
+                print("")
                 GameBoard.print_board(user_guess_board)
                 break
 
