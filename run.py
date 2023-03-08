@@ -33,7 +33,7 @@ class welcome_screen():
     print("           )___))___))___)               ")
     print("          )____)____)_____)              ")
     print("        _____|____|____|______           ")
-    print("        \                    /           ")
+    print("       /                    /            ")
     print(Fore.BLUE + "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
     print(Fore.BLUE + "      ^^^^      ^^^^     ^^^    ^^       ")
     print(Fore.BLUE + "^^^^^     ^^^^      ^^^     ^^^^^    ^^^^")
@@ -238,7 +238,7 @@ class RunGame():
             break
         else:
             print(Fore.YELLOW + "I missed!")
-            computer_board.board[computer_x_row][computer_y_column] = "-"        
+            computer_board.board[computer_x_row][computer_y_column] = "-"
 
 
 def main_game_run():
