@@ -207,6 +207,9 @@ class RunGame():
                 break
 
         # Computer's turn
+        print(Fore.GREEN + "------------------------------")
+        print(Fore.GREEN + "  Now its the Computers turn  ")
+        print(Fore.GREEN + "------------------------------")
         computer_x_row, computer_y_column = Battleship.get_computer_input()
         print(f"Computer guessed \
              {chr(computer_y_column + 65)}{computer_x_row + 1}")
