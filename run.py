@@ -132,24 +132,25 @@ class Battleship:
         return self.board
 
     def get_user_input(self):
-        # while True:
-        try:
-            x_row = input("Please enter a ship row 1-8: \n")
-            while x_row not in "12345678":
-                print("Please enter a valid row")
-                x_row = input("Please enter ship row 1-8: \n")
+        while True:
+            try:
+                x_row = input("Please enter a ship row 1-8: \n")
+                while x_row not in "12345678" and x_row != "":
+                    print("Please enter a valid row")
+                    x_row = input("Please enter ship row 1-8: \n")
 
-            y_column = input("Please enter a ship column A-H: \n").upper()
-            while y_column not in "ABCDEFGH":
-                print("Please enter a valid column: ")
-                y_column = input("Please enter a ship column A-H: \n")\
-                    .upper()
+                y_column = input("Please enter a ship column A-H: \n").upper()
+                while y_column not in "ABCDEFGH" and y_column != "":
+                    print("Please enter a valid column: ")
+                    y_column = input("Please enter a ship column A-H: \n")\
+                        .upper()
 
-            return int(x_row) - 1, GameBoard.get_char_to_num()[y_column]
+                if x_row != "" and y_column != "":
+                    return int(x_row) - 1,\
+                         GameBoard.get_char_to_num()[y_column]
 
-        except (ValueError, KeyError):
-            print(Fore.RED + "Not a valid input")
-            return self.get_user_input()
+            except (ValueError, KeyError):
+                print(Fore.RED + "Not a valid input")
 
     # def get_comp_guess(self):
     #     x_row, y_column = random.randint(0, 7), random.randint(0, 7)
