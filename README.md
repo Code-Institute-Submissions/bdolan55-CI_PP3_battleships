@@ -286,7 +286,7 @@ The website was tested on the following browsers:
 3. As a first time user, I want to find the leaderboard.
     * After the Player inserts there name a Main Menu will appear with 3 options to choose, The Leaderboard section is Option 3 on the Menu. 
 4. As a first time user, I want to prompted on what to do next after every turn.
-    * When the user is playing the game and a text promp will state firstly which Row they would like to choose 1-8 and when decision made they will be prompted to choose which column they would like to choose. When the choice has been made they will be notified if they have hit any of the computer ships or if they have missed. They will then be met with a "Computers Turn" text and the computer will make a random guess. The result of hit or miss will be shown to the player then asell. Then the sequnce will repeat until all ships are hitbby either the Player or Computer or until the players turns are all used. This will be end of the game.   
+    * When the user is playing the game and a text promp will state firstly which Row they would like to choose 1-8 and when decision made they will be prompted to choose which column they would like to choose A-H. When the choice has been made they will be notified if they have hit any of the computer ships or if they have missed. They will then be met with a "Computers Turn" text and the computer will make a random guess. The result of hit or miss will be shown to the player then asell. Then the sequnce will repeat until all ships are hitbby either the Player or Computer or until the players turns are all used. This will be end of the game.   
 5. As a first time user, I want to be able to see the current score in the match. 
     * When the user and the computer have both guessed there Row and Column, The Players Score and Computer score will be shown to let the player know if they are winning or losing so far in the game. 
 6. As a first time user, I want to be notified when I win, lose or draw the game at the end.
@@ -300,24 +300,22 @@ The website was tested on the following browsers:
     * Battleships is fun and exciting game to play. The game encourages playing with its User friendly experience and is for people of all ability and ages.The user will be able to navigate the game easily and understand the interface and allow the player to enjoy the game.
 
 #### Site Owner 
-9.  As the site owner, Provide clear details on how to play the game.
-    * On initial loading of the page, The creator / owner has set a pop up box over the game container. The pop up box show the rules to the game Rock paper Scissors and also shows what hand beats what hand so the user will gain the understanding on how to win or lose.
-10. As the site owner, Provide the ability to insert your name into the game to make it more interactive to the player.
-    * On initial loading of the page, The creator / owner has set a pop up box over the game container. This popup box has the rules of the game but also at the bottom it has a text box prompting the user to insert there name and press the fight button. The value entered in the text box will be shown within the game container and the name/value will be set beside the players score.
+9.  As the site owner, Provide the ability to insert your name into the game to make it more interactive to the player.
+    * On initial loading of the page, The player will be met with a text image of a ship. When the ship loads below there will be a prompt for the Player to enter their name.
+10. As the site owner, Provide clear details on how to play the game..
+    * The player enters their name and press Enter, A menu will then be loaded and will have 3 options to choose. 1. Play Game, 2. Rules and 3. Leaderboard. The player will be prompted to enter their prefered choice. The Player will press 2 to see the rules of the game and how to play.
 11. As the site owner, Provide a user frindly interface and enjoyable experience.
-    * The game is visually striking with the color pallette chosen to highlight and bring forward all buttons and Hand gesture so that the visitor will enjoy the experience with the game. The website encourages playing with its User friendly experience and is set up for people of all abilities and ages to have fun.
+    * The game is set up with instructions at every step to navigate the player through the Battleship Game. The player will be prompted for name and choice, will be told when the selection is invalid and guide them on how get to the next step. This makes the experience of playing the game easy and fun. The prompts throughout the game will also keep the player update on the score and how many turns are remaining. 
 12. As the site owner, Provide the ability to see the score in the current match after every turn.
-    * Within the game container above the Rock paper Scissors hand gesture emojis there is a scoreboard. The score board shows the player score and the computer score side by side. The game is first to 5 wins.
+    * When the player makes there move, The computer will automatically go next and the player and computer scpre will be shown after every turn to keep the player updated on the score and if they are winning or losing.
 13. As the site owner, Provide clear indication if the player has hit or miss the computers ship.
-    * When the player decides and clicks the chosen hand, the hand will glow a color of green for win, Red for lose or Orange for draw. Text above the emjois will also tell player the result of the round and will be coloured the same as the hand gesture with the result.  
+    * When the player decides on there Row selection 1-8 and also there column selection A-H the shot will be taken, below the Players selection they will be prompted if the guess is a hit, miss or a notification to guess again as they have already chosen that position already.  
 14. As the site owner, Provide clear indication if the computer has hit or miss the players ship.
-    * The game is first to 5 so when either the player or computer gets to 5 the user will be met with an alert box stating if they have won or lost and will reset the game to 0-0 when the user presses ok.
+    * When the Computer auto generates the guess on there Row selection 1-8 and also there column selection A-H the shot will be taken, below the Computers selection the player will be prompted if the Computers guess is a hit or miss. The computer will not get a notification to guess again as the python code is set up to re-run the computer guess until a selection not chosen before is made.  
 15. As the site owner, Provide clear indication on who wins or losses the match. 
-    start again at 0-0.
-    * There is reset button located at the bottom of the game container area. When pressed this will end the current game and reset the score to 0-0.
+    * When the Player and Computer have used up all turns the game will end. At the end of the game the player will be notified of the player and Computers final score and can determine who the winner is. 
 16. As the site owner, Provide the player the a map of locations of the computer ships they missed in the game.
-    start again at 0-0.
-    * There is reset button located at the bottom of the game container area. When pressed this will end the current game and reset the score to 0-0.
+    * When the game end and the final scores are shown to the player, they will also be shown the computers ship locations to see the locations of their guesses and also the positions of the ships the player has missed.
 ---
 
 ## Bugs and Future Works
