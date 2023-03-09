@@ -339,18 +339,18 @@ The website was tested on the following browsers:
 The website was deployed using Heroku by following these steps:
 1. Code Institute Template to be used for the heroku deployment as files within are required and ensure new line charachter is include in text areas as heroku can have problems reading the text.
 2. In the Terminal type 'pip3 freeze > requirements.txt'. This updates the Code Institue Template requirements.txt file and ensures all packages or imports will work within Heroku. Also ensure to include any additional libraries like coloroama within the requirements.txt to ensure that they are uploaded and can work with heroku.
-2. Login to Heroku or create a Heroku account.
-3. On the Heroku Dashboard click the "Create New App" button.
-4. Choose a name for your application and which must be a unique name and select your region, and press the Create app button.
-5. Navigate to the settings Tab, ensure to include the python build pack and then the Node.js build pack as they are both required for the Code Institute template.
-6. Add two Config VAR and CREDS keys. Enter the PORT and Value of the creds.json file and for the second Config Var use the Key of "PORT" and Value "8000"
+3. Login to Heroku or create a Heroku account.
+4. On the Heroku Dashboard click the "Create New App" button.
+5. Choose a name for your application and which must be a unique name and select your region, and press the Create app button.
+6. Navigate to the settings Tab, ensure to include the python build pack and then the Node.js build pack as they are both required for the Code Institute template.
+7. Add two Config VAR and CREDS keys. Enter the PORT and Value of the creds.json file and for the second Config Var use the Key of "PORT" and Value "8000"
 8. Navigate to the deploy tab and choose GitHub as a deployment method.
 9. Search for the repository you would like to use.
 10. Click manual deploy method and press build. Ensure you have the "Master/Main" Branch selected..
 11. When the app has been built click the "View" button and you will be directed to the deployed heroku site with you application.
 
 How fork a repository by following the below steps:
-1. Go to the GitHub repository
+1. Go to the GitHub repository.
 2. Click the fork icon on the top right of the page.
 3. Hit the tab with the owner of the forked repository.
 4. As default the repository will be named the same as original Repo but can be changed in box besode ownser tab.
