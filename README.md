@@ -160,7 +160,7 @@ The Battleships has been presented in a User friendly and easily navigated way. 
 - <a href="https://pep8ci.herokuapp.com/">Code Institute Python Linter</a> - Online Python error checker.
 
 
-## Features
+<!-- ## Features
 The website consists of a main home page hosting the Rock Paper Scissors game and a Popup screen explaining the rules of the game and textbox for entering the players name.
 
 ### PopUp Box
@@ -209,15 +209,15 @@ The website consists of a main home page hosting the Rock Paper Scissors game an
 
 ![Game Over PopUp](/assets/images/game_over_popup.png)
 
----
+--- -->
 
 ## Validation
 <br>
 
 ### HTML Validation
 
-The Rock Paper Scissors game website was tested using W3C Markup Validation to validate the HTML code from the website. The page has passed with no errors or no warnings.
-<details><summary>Home Page</summary>
+The Battleships game website was tested using W3C Markup Validation to validate the HTML code from the website. The page has passed with no errors or no warnings.
+<details><summary>Main Page</summary>
 <img src="assets/images/html_validator_result.png">
 </details>
 
@@ -225,8 +225,8 @@ The Rock Paper Scissors game website was tested using W3C Markup Validation to v
 <br>
 
 ### CSS Validation
-The Rock Paper Scissors Game website was tested using W3C Jigsaw CSS Validator to validate the CSS code within the website. The Rock Paper Scissors Game CSS passed the W3C Jigsaw CSS Validator and showed no errors recorded.
-<details><summary>Home Page</summary>
+The Battleships website was tested using W3C Jigsaw CSS Validator to validate the CSS code within the website. The Battleships Game CSS passed the W3C Jigsaw CSS Validator and showed no errors recorded.
+<details><summary>Main Page</summary>
 <img src="assets/images/css_validator_result.png">
 </details>
 
@@ -234,17 +234,17 @@ The Rock Paper Scissors Game website was tested using W3C Jigsaw CSS Validator t
 <br>
 
 ### Accessibility
-The Rock Paper Scissors Game website was tested using WAVE WebAIM accessibility tool to ensure the website shows no accessibility errors. The Rock Paper Scissors Game website have passed accesibility testing with no errors recoreded.
-<details><summary>Home</summary>
+The Battleships Game website was tested using WAVE WebAIM accessibility tool to ensure the website shows no accessibility errors. The Battleships Game website have passed accesibility testing with no errors recoreded.
+<details><summary>Main Page</summary>
 <img src="assets/images/wave_report_result.png">
 </details>
 
 <br>
 
 ### Performance 
-The Rock Paper Scissors Game website was tested for performance using Google Lighthouse within Google Chrome Developer Tools. The Rock Paper Scissors Game website has passed with 100% in all 4 areas.
+The Battleships Game website was tested for performance using Google Lighthouse within Google Chrome Developer Tools. The Rock Paper Scissors Game website has passed with 100% in all 4 areas.
 
-<details><summary>Home</summary>
+<details><summary>Main Page</summary>
 <img src="assets/images/lighthouse-scores.png">
 </details>
 <details><summary>Mobile Version</summary>
@@ -253,10 +253,10 @@ The Rock Paper Scissors Game website was tested for performance using Google Lig
 
 <br>
 
-### JSHint
-The Rock Paper Scissors Game website was tested for JavaScript errors using JSHint.The Rock Paper Scissors Game website have passed JSHint testing with no errors recoreded. The settings have been set to JavaScript ES6.
+### CI Python Linter
+The Battleships Game website was tested for Python errors using CI Python Linter.The Battleships Game Python code has passed CI Python Linter testing with no errors recorded.
 
-<details><summary>JavaScript Testing</summary>
+<details><summary>CI Python Linter Result</summary>
 <img src="assets/images/jshint_result.png">
 </details>
 
@@ -266,7 +266,6 @@ The Rock Paper Scissors Game website was tested for JavaScript errors using JSHi
 The website was tested on the following devices:
 - Redmi Note 11 Pro 5G
 - Lenovo Ideapad Flex 5
-- The responsivness of the site was also tested with the google developer tools to show the website responsivness to various screen sizes.
 
 
 ### Browser compatability
