@@ -71,8 +71,7 @@ the visitor to return to play again.
 ## User Experience
 
 ### Target Audience
-- This game would be aimed at casual gamers who emjoy a quick and easy game to pass the time.
-- The game is a great way to pass the time, whether waiting in line, on a break, or just looking for something to do.
+- This game would be aimed at casual gamers who enjoy a quick and easy game to pass the time.
 
 ### User Requrements and Expectations
 
@@ -87,26 +86,29 @@ the visitor to return to play again.
 ### User Stories
 
 #### First-time User 
-1. As a first time user, I want to find understand the rules to the Game.
 2. As a first time user, I want to add my name into game to make it a more personal experience.
-3. As a first time user, I want to be able to see the current score in the match.
-4. As a first time user, I want to be notified when I win, lose or draw a hand and a game.
-5. As a first time user, I want to have the ability to reset game if I want.
+2. As a first time user, I want to find understand the rules to the Game.
+3. As a first time user, I want to find the leaderboard.
+4. As a first time user, I want to prompted on what to do next after every turn.
+5. As a first time user, I want to be able to see the current score in the match.
+6. As a first time user, I want to be notified when I win, lose or draw the game at the end.
+7. As a first time user, I want to have the ability to reset game if I want.
 
 
 #### Returning User
-5. As a returning user, I want a reminder on the game rules.
-6. As a returning user, I want to enjoy the game like the first time I visited ther site.
+8. As a returning user, I want a reminder on the game rules.
+9. As a returning user, I want to enjoy the game like the first time I visited ther site.
  
 
 #### Site Owner 
-7.  As the site owner, Provide clear details on how to play the game.
-8. As the site owner, Provide the ability to insert your name into the game to make it more interactive the player.
-9. As the site owner, Provide a user frindly interface and enjoyable experience.
-10. As the site owner, Provide the ability to see the score in the current match.
-11. As the site owner, Provide clear indication on who wins , losses or draw the hand.
-12. As the site owner, Provide clear indication on who wins or losses the match.
-13. As the site owner, Provide the player the ability to reset the scores on the current game and start again at 0-0.
+10. As the site owner, Provide clear details on how to play the game.
+11. As the site owner, Provide the ability to insert your name into the game to make it more interactive to the player.
+12. As the site owner, Provide a user frindly interface and enjoyable experience.
+13. As the site owner, Provide the ability to see the score in the current match after every turn.
+14. As the site owner, Provide clear indication if the player has hit or miss the computers ship.
+14. As the site owner, Provide clear indication if the computer has hit or miss the players ship.
+15. As the site owner, Provide clear indication on who wins or losses the match.
+16. As the site owner, Provide the player the a map of locations of the computer ships they missed in the game.
 ---
 
 ## Design
