@@ -111,7 +111,7 @@ the visitor to return to play again.
 16. As the site owner, Provide the player the a map of locations of the computer ships they missed in the game.
 ---
 
-## Design
+<!-- ## Design
 
 ### Design Choices
 The Rock Paper Scissors game was designed to be clean, user friendly and an enjoyable experienece. Visual notifications have been added with animations to provide the user a fun game experience and also show the user visually if they have won, lost or drawn. 
@@ -128,10 +128,10 @@ The Font chosen for the Rock Paper Scissors game is from the Google Fonts Barlow
 <br>
 
 ![Fonts](./assets/images/barlow_700_bold_font_image.png)
-![Fonts](./assets/images/barlow_200_font_image.png)
+![Fonts](./assets/images/barlow_200_font_image.png) -->
 
 ### Structure
-The website has been presented in a User friendly and easily navigated way. On visting of the site you will be met with a pop up to tell you the rules and ways to win and also a text box for you to enter your name so the player score will be personal to the game player. When you enter the game section of the site, there is a score board to show who is winning the match between you and the computer. The 3 main icons on the page are Emoji hands shaped as rock, hand shaped as paper and lastly hand shaped like sciisors. The user chooses from these 3 options there choice of hand they want to use for each round. When the mouse pointer goes over the hands they will hover for effect. When the hand is chosen it will glow red for loser, green for winner and orange if it is a draw and also the text above the emoji hands will change to show result and go the same color as the result. The game is based on a first to five method. When either the Player or the Computer get to five wins a pop up alert box will show the winner of the game and reset the scores to 0-0. There is also a reset game button below the emoji hands to allow the ability to reset the score to 0-0 at any time.
+The Battleships has been presented in a User friendly and easily navigated way. On running of the Balleship programs you will be met with visual que of a ship and also be prompted to enter your name. When the name is entered you will be guided to the "Main Menu" of the game. At the Main Menu, the player will be prompted to make a selection from the 3 options. The 3 options available are Play Game, Read Rules or See leaderboard. When you enter the Play Game section of the game, there is a 8x8 Grid broken into 2 selections 1-8 for Row and A-H for column, The player will then be prompted to make there row and column selection ex. A1,C5,E6,G8 etc.. The players guess will be then cross referenced with the Computers random generated ship locations and prompt the Player if they have hit or miss the Computers ship. The outcome of the guess will be then shown back to player. The computer will make a gues on the players random generated ship and the result of the computers guess will also be prompted to the player. After each round a score board will be appear and show how many ship hits the player and the computer have so far. The Player and Computer will have 10 guesses to hit all eachothers ships. After 10 turns the player will be prompted with a note saying that they have 0 turns remaining and it is Game Over. The Final scores of the Player and Computer will be shown to detrmine the winner. At the very end of the game, The computers board will be shown to the player to show the locations of the remaing ships that the player has not hit. The objective of the game is to sink all of your opponents ships. When either the Player or the Computer hit all the opponents ships they will be prompted that they have won as they have hit all ships.
 
 
 ### Wireframes
