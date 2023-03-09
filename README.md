@@ -329,21 +329,25 @@ The website was tested on the following browsers:
 
 - I had an error messages on the num to char function and the get computer guess input function. The error message stated Method has no arguement. I added in a staticmethod python built in function as an object was not required for each of the functions. This removed the errors.
 
-- 
-- In a future update I would like the pop up "Game Over" alert to be customised to a Popup to suit the site allow for continuity througout.
+- In a future update I would like the leaderboard external gsheet to update automatically with a most hits in least guesses and in the quickest time. Currently the leaderboard is static and does not update. The leaderboard option on the main menu does bring you to external gsheet currently and prints the manually entered scores to terminal.
 
-- In a future update I would like to add sounds effects to the Rock Paper and Scissors button presses so that each hand has a sound effect of a punch like in a fighter type game. Also when the game is over and either the player or Computer wins the sound effect would play with the noise of a cheering crowd.
+- In a future update I would like to add the option of placing your ships on the board and also add in 2,3 and 4 grid spot ships. The different type of ships could have differnt points scores and be added up at end of turns to give you a score recieved total.
 
 ---
 
 ## Deployment
-The website was deployed using GitHub Pages by following these steps:
-1. In the GitHub repository navigate to the Settings tab
-2. Within the settings tab click on the pages section on the left hand side on page.
-3. Navigate to the Build and deployment area of the page and select deploy from a branch.
-4. Within the branch section choose the which root file you would like to deploy.
-5. hit the tab to the right and the dropdown menu choose the file location.
-6. Press save and the site will deloy and be visible at the top of the page.
+The website was deployed using Heroku by following these steps:
+1. Code Institute Template to be used for the heroku deployment as files within are required and ensure new line charachter is include in text areas as heroku can have problems reading the text.
+2. In the Terminal type 'pip3 freeze > requirements.txt'. This updates the Code Institue Template requirements.txt file and ensures all packages or imports will work within Heroku. Also ensure to include any additional libraries like coloroama within the requirements.txt to ensure that they are uploaded and can work with heroku.
+2. Login to Heroku or create a Heroku account.
+3. On the Heroku Dashboard click the "Create New App" button.
+4. Choose a name for your application and which must be a unique name and select your region, and press the Create app button.
+5. Navigate to the settings Tab, ensure to include the python build pack and then the Node.js build pack as they are both required for the Code Institute template.
+6. Add two Config VAR and CREDS keys. Enter the PORT and Value of the creds.json file and for the second Config Var use the Key of "PORT" and Value "8000"
+8. Navigate to the deploy tab and choose GitHub as a deployment method.
+9. Search for the repository you would like to use.
+10. Click manual deploy method and press build. Ensure you have the "Master/Main" Branch selected..
+11. When the app has been built click the "View" button and you will be directed to the deployed heroku site with you application.
 
 How fork a repository by following the below steps:
 1. Go to the GitHub repository
