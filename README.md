@@ -111,40 +111,8 @@ the visitor to return to play again.
 16. As the site owner, Provide the player the a map of locations of the computer ships they missed in the game.
 ---
 
-<!-- ## Design
-
-### Design Choices
-The Rock Paper Scissors game was designed to be clean, user friendly and an enjoyable experienece. Visual notifications have been added with animations to provide the user a fun game experience and also show the user visually if they have won, lost or drawn. 
-
-### Colour
-The colors scheme chosen for Rock paper Scissors game is to provide an enjoyable easy on the eye experience. The blue palette that has been chosen because it is know to provide feelings of confidence, trust and tranquility to the visitors to coming to the site to play the game. I used the Coolors palette website to find the colors used with the website.
-<br>
-
-![Colour scheme](./assets/images/color_pallete_image.png)
-
-
-### Fonts
-The Font chosen for the Rock Paper Scissors game is from the Google Fonts Barlow Family. The font chosen is the Barlow 700 for Headings and Barlow 200 for text throughout the site.. This was chosen to promote a clean, functional and fun look to the site.
-<br>
-
-![Fonts](./assets/images/barlow_700_bold_font_image.png)
-![Fonts](./assets/images/barlow_200_font_image.png) -->
-
 ### Structure
 The Battleships has been presented in a User friendly and easily navigated way. On running of the Balleship programs you will be met with visual que of a ship and also be prompted to enter your name. When the name is entered you will be guided to the "Main Menu" of the game. At the Main Menu, the player will be prompted to make a selection from the 3 options. The 3 options available are Play Game, Read Rules or See leaderboard. When you enter the Play Game section of the game, there is a 8x8 Grid broken into 2 selections 1-8 for Row and A-H for column, The player will then be prompted to make there row and column selection ex. A1,C5,E6,G8 etc.. The players guess will be then cross referenced with the Computers random generated ship locations and prompt the Player if they have hit or miss the Computers ship. The outcome of the guess will be then shown back to player. The computer will make a gues on the players random generated ship and the result of the computers guess will also be prompted to the player. After each round a score board will be appear and show how many ship hits the player and the computer have so far. The Player and Computer will have 10 guesses to hit all eachothers ships. After 10 turns the player will be prompted with a note saying that they have 0 turns remaining and it is Game Over. The Final scores of the Player and Computer will be shown to detrmine the winner. At the very end of the game, The computers board will be shown to the player to show the locations of the remaing ships that the player has not hit. The objective of the game is to sink all of your opponents ships. When either the Player or the Computer hit all the opponents ships they will be prompted that they have won as they have hit all ships.
-
-
-<!-- ### Wireframes
-
-<details><summary>Wireframe Desktop Layout</summary>
-<img src="assets/images/wireframe_desktop.png">
-</details>
-<details><summary>Wireframe Mobile Layout</summary>
-<img src="assets/images/wireframe_mobile.png">
-</details>
-<details><summary>Wireframe Tablet Layout</summary>
-<img src="assets/images/wireframe_tablet.png">
-</details> -->
 
 ---
 
@@ -159,6 +127,7 @@ The Battleships has been presented in a User friendly and easily navigated way. 
 - <a href="https://pythontutor.com/python-debugger.html#mode=edit">Python Tutor</a> - Online Python Code Exectution checker.
 - <a href="https://pep8ci.herokuapp.com/">Code Institute Python Linter</a> - Online Python error checker.
 - <a href="https://asciiart.website/index.php?art=transportation/nautical">ASCII Art</a> - Welcome Page Ship Art
+- <a href="https://openai.com/blog/chatgpt">Chat GPT</a> Assist with checking Python Code functionality.
 
 
 <!-- ## Features
@@ -215,42 +184,16 @@ The website consists of a main home page hosting the Rock Paper Scissors game an
 ## Validation
 <br>
 
-### HTML Validation
+### Manual Testing
 
-The Battleships game website was tested using W3C Markup Validation to validate the HTML code from the website. The page has passed with no errors or no warnings.
-<details><summary>Main Page</summary>
-<img src="assets/images/html_validator_result.png">
-</details>
+To test my Battleships game, I first checked that all the game's features were working correctly. I made sure that the user interface was user-friendly and intuitive, and that the computer placed the ships randomly. I also verified that the game's logic was working correctly, such as ensuring that the player could only hit the opponent's ships once.
 
+Next, I tested the game's scoring system to ensure that it accurately updated the player's score and displayed the correct message when the player won or lost.
 
-<br>
+To check for bugs and errors, I deliberately inputted incorrect data to try and break the game. For example, I tried to place a ship outside of the game board or hit the same spot twice. I also tested whether the game handled unexpected inputs and displayed helpful error messages.
 
-### CSS Validation
-The Battleships website was tested using W3C Jigsaw CSS Validator to validate the CSS code within the website. The Battleships Game CSS passed the W3C Jigsaw CSS Validator and showed no errors recorded.
-<details><summary>Main Page</summary>
-<img src="assets/images/css_validator_result.png">
-</details>
+Overall, by following these steps, I was able to ensure that my Battleships game was reliable, easy to use, and provided an enjoyable experience for players playing against the computer.
 
-
-<br>
-
-### Accessibility
-The Battleships Game website was tested using WAVE WebAIM accessibility tool to ensure the website shows no accessibility errors. The Battleships Game website have passed accesibility testing with no errors recoreded.
-<details><summary>Main Page</summary>
-<img src="assets/images/wave_report_result.png">
-</details>
-
-<br>
-
-### Performance 
-The Battleships Game website was tested for performance using Google Lighthouse within Google Chrome Developer Tools. The Rock Paper Scissors Game website has passed with 100% in all 4 areas.
-
-<details><summary>Main Page</summary>
-<img src="assets/images/lighthouse-scores.png">
-</details>
-<details><summary>Mobile Version</summary>
-<img src="assets/images/lighthouse_score_mobile.png">
-</details>
 
 <br>
 
@@ -258,7 +201,7 @@ The Battleships Game website was tested for performance using Google Lighthouse 
 The Battleships Game website was tested for Python errors using CI Python Linter.The Battleships Game Python code has passed CI Python Linter testing with no errors recorded.
 
 <details><summary>CI Python Linter Result</summary>
-<img src="assets/images/jshint_result.png">
+<img src="">
 </details>
 
 <br>
@@ -374,14 +317,13 @@ You can clone the repository by following these steps:
 ### Code used and adapted
 
 In order of appearance:
-- <a href="https://www.youtube.com/watch?v=jaVNP3nIAv0">Free Code Camp</a> was used to understand Rock Paper Scissors Javascript formation and how to structure the code i adapted and functions to achieve the end result. Inspiration was also taken in sections of the page for design of my Rock Paper Scissors game.
-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction">MDN Web Docs</a> to assist in correct formation of functions and event listeners.
-- <a href="https://www.w3schools.com">W3 Schools</a> was used to assist me in small programming methods I had throughout the entire Project. 
-- <a href="https://www.youtube.com/watch?v=sEJB7FtBoug&t=2s">Coding Artist</a> video was used to assist on the ability to Get a PopUp page to appear automatically on loading of the page. 
-- <a href="https://www.youtube.com/watch?v=aEj0Wu33hJM">Six Minutes Smarter</a> video was used to assist on the ability to take the value from my textbox on the PopUp to display within the game area container. This was to allow the user to insert there name within the game and it to be displayed beside there score in the scoring area. 
-- <a href="https://www.w3schools.com/tags/tag_meta.asp">W3 Schools</a> Meta Tag information on how to improve the web page SEO.
-- <a href="https://learn.codeinstitute.net/ci_program/diplomainsoftwaredevelopmentecomm">Code Institute</a> Software development course was used to assist me in small programming methods I had throughout the entire Project through the well taught and informative Tutorials. I also used the Love Maths tutorials to learn how to use the DOMCONTENTLOADED function and the focus Function to allow the text box on the PopUp to be automatically ready to enter the Player Name Text.
-- <a href="https://github.com/4n4ru/CI_MS1_BodelschwingherHof"> Ana ( github = 4n4ru )</a> to assist with structure and expectation required for a Github README section. 
+- <a href="https://www.youtube.com/watch?v=alJH_c9t4zw">Knowledge Mavens</a> was used to understand The Battleships Python OOP formation and how to structure the code and have adapted functions to achieve the end result. Inspiration was also taken in sections of the page for design of my Battleships game.
+- <a href="https://realpython.com/python-sleep/">Real Python</a> to assist in using Time dealys within Python Code.
+- <a href="https://www.w3schools.com/python/default.asp">W3 Schools</a> was used to assist me in small programming methods I had throughout the entire Project. 
+- <a href="https://www.youtube.com/watch?v=u51Zjlnui4Y">Tech with Tim</a> video was used to assist on the ability to use colorama within my python project. 
+- <a href="https://stackoverflow.com/questions/48881196/how-can-i-split-up-a-long-f-string-in-python"></a>Stack Overflow</a> to assist in how to split f-string lines that are too long. 
+- <a href="https://openai.com/blog/chatgpt">Chat GPT</a> to assist in checking code methods and as a refernec to show where i have gone wrong with some Python code.
+- <a href="https://learn.codeinstitute.net/ci_program/diplomainsoftwaredevelopmentecomm">Code Institute</a> Software development course was used to assist me in small programming methods I had throughout the entire Project through the well taught and informative Tutorials. I also used the Love Sandwiches tutorials to learn how to Install Gspread and link to external Gsheet.
 
 ## Acknowledgment
 
