@@ -50,18 +50,21 @@ Once a ship has been hit on all of its squares, the player who hit the ship anno
 ## Project Goals 
 
 ### User Goals
-- Learn how to play Rock Paper Scissors.
-- Gain an understanding of the Rules in this Rock Paper Scissors game.
-- The ability to choose the gesture and compete against the computer.
-- See the current score inmt he match.
-- Reset the game and start again at any point if I want to.
+- I want to enter name to give the game a personal experience.
+- I want to play the game.
+- I want to read the rules of the game and how to play.
+- I want to see the current leaderboard of winners.
+- I want to see at the end of the game the ships that I have not hit.
 
 ### Site Owner Goals
+- Give the player a more personal experience by allowing name entry.
 - Provide the visiting user a good understanding of the game and rules.
-- Allow to site ability to make there choice fromn the availabe hands.
-- The site visitor playing ther game shoule be able to see the current score in the match easily.
-- Provide the option to play the again if they win or lose.
-- Provide a user friendly enviornment to encourage the visitor to return to play again.
+- Provide user the ability to see the leaderboard of players.
+- Prompt player on what to do next to provide a user friendly enviornment to encourage 
+the visitor to return to play again.
+- Show the player if there guess has hit or miss the computers ship.
+- Show the player the computers guess and prompt if the computer has a hit or miss.
+- Provide the player the score at the end of the game to see if they have won or lost the game.
 
 ## User Experience
 
@@ -71,10 +74,11 @@ Once a ship has been hit on all of its squares, the player who hit the ship anno
 
 ### User Requrements and Expectations
 
-- The ability to make a selection of rock, paper, or scissors and have it register with the game.
+- The ability to make a selection on the Opening Menu on what I want to do be it Play Game, Read Rules or see the leaderboard.
+- The ability to make a selection on the User Guess grid and have it register with the game.
+- The site visitor should be able to see the outcome of a guess in the game and understand if it is a hit or miss.
+- The site visitor should be able to see the outcome of a computers guess in the game and understand if it is a hit or miss.
 - The site visitor should be able to see the outcome of the game and understand who has won or lost.
-- Easily keep track of the score and see how many rounds they have won or lost.
-- Ability to restart the Game easily to 0-0 if required.
 
 ### User Stories
 
