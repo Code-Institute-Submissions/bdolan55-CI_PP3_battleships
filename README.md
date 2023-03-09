@@ -54,7 +54,8 @@ Once a ship has been hit on all of its squares, the player who hit the ship anno
 - I want to play the game.
 - I want to read the rules of the game and how to play.
 - I want to see the current leaderboard of winners.
-- I want to see at the end of the game the ships that I have not hit.
+- I want to see the current score after every guess.
+- I want to see at the end of the game the final score and the ships that I have not hit.
 
 ### Site Owner Goals
 - Give the player a more personal experience by allowing name entry.
@@ -64,6 +65,7 @@ Once a ship has been hit on all of its squares, the player who hit the ship anno
 the visitor to return to play again.
 - Show the player if there guess has hit or miss the computers ship.
 - Show the player the computers guess and prompt if the computer has a hit or miss.
+- Provide the player the current score at the end of every turn.
 - Provide the player the score at the end of the game to see if they have won or lost the game.
 
 ## User Experience
@@ -78,7 +80,9 @@ the visitor to return to play again.
 - The ability to make a selection on the User Guess grid and have it register with the game.
 - The site visitor should be able to see the outcome of a guess in the game and understand if it is a hit or miss.
 - The site visitor should be able to see the outcome of a computers guess in the game and understand if it is a hit or miss.
+- The site visitor should be able to see the score after every turn to see if they are winning or losing.
 - The site visitor should be able to see the outcome of the game and understand who has won or lost.
+- The site visitor should be able to see the the grid at end of game to show them the locations of the missed ships.
 
 ### User Stories
 
