@@ -243,6 +243,10 @@ class RunGame():
         if computer_board.board[computer_x_row][computer_y_column] == ".":
             print(Fore.RED + "I hit one of your battleships!")
             computer_board.board[computer_x_row][computer_y_column] = "X"
+            score_1 = Battleship.count_hit_ships(user_guess_board)
+            print(Fore.GREEN + "Player Score: " + str(score_1))
+            score_2 = Battleship.count_hit_ships(computer_board)
+            print(Fore.GREEN + "Computer Score: " + str(score_2))
             # check for win or lose
         elif Battleship.count_hit_ships(computer_board) == 30:
             print(Fore.RED + "Game Over - I hit all your battleships!")
@@ -251,6 +255,10 @@ class RunGame():
         else:
             print(Fore.YELLOW + "I missed!")
             computer_board.board[computer_x_row][computer_y_column] = "-"
+            score_1 = Battleship.count_hit_ships(user_guess_board)
+            print(Fore.GREEN + "Player Score: " + str(score_1))
+            score_2 = Battleship.count_hit_ships(computer_board)
+            print(Fore.GREEN + "Computer Score: " + str(score_2))
 
 
 def main_game_run():
