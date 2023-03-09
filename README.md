@@ -92,23 +92,23 @@ the visitor to return to play again.
 4. As a first time user, I want to prompted on what to do next after every turn.
 5. As a first time user, I want to be able to see the current score in the match.
 6. As a first time user, I want to be notified when I win, lose or draw the game at the end.
-7. As a first time user, I want to have the ability to reset game if I want.
+
 
 
 #### Returning User
-8. As a returning user, I want a reminder on the game rules.
-9. As a returning user, I want to enjoy the game like the first time I visited ther site.
+7. As a returning user, I want a reminder on the game rules.
+8. As a returning user, I want to enjoy the game like the first time I visited ther site.
  
 
 #### Site Owner 
-10. As the site owner, Provide clear details on how to play the game.
-11. As the site owner, Provide the ability to insert your name into the game to make it more interactive to the player.
-12. As the site owner, Provide a user frindly interface and enjoyable experience.
-13. As the site owner, Provide the ability to see the score in the current match after every turn.
-14. As the site owner, Provide clear indication if the player has hit or miss the computers ship.
-15. As the site owner, Provide clear indication if the computer has hit or miss the players ship.
-16. As the site owner, Provide clear indication on who wins or losses the match.
-17. As the site owner, Provide the player the a map of locations of the computer ships they missed in the game.
+9. As the site owner, Provide clear details on how to play the game.
+10. As the site owner, Provide the ability to insert your name into the game to make it more interactive to the player.
+11. As the site owner, Provide a user frindly interface and enjoyable experience.
+12. As the site owner, Provide the ability to see the score in the current match after every turn.
+13. As the site owner, Provide clear indication if the player has hit or miss the computers ship.
+14. As the site owner, Provide clear indication if the computer has hit or miss the players ship.
+15. As the site owner, Provide clear indication on who wins or losses the match.
+16. As the site owner, Provide the player the a map of locations of the computer ships they missed in the game.
 ---
 
 <!-- ## Design
@@ -280,44 +280,42 @@ The website was tested on the following browsers:
 
 #### First-time User 
 1. As a first time user, I want to add my name into game to make it a more personal experience.
-    * On initial loading of the page, The user will be met with a pop up box over the game container. The pop up box show the rules to the game Rock paper Scissors and also show what hand beats what hand so the user will gain the understanding on how to win or lose.
+    * On initial loading of the page, The user will be met with a text based image of a sail ship with color utilising the colorama import. The player will then be prompted to insert there name.
 2. As a first time user, I want to find understand the rules to the Game.
-    * On initial loading of the page, The user will be met with a pop up box over the game container. This popup box has the rules of the game but also at the bottom it has a text box prompting the user to insert there name and press the fight button. The value entered in the text box will be shown within the game container and the name/value will be set beside the players score.
+    * After the Player inserts there name a Main Menu will appear with 3 options to choose, The rules section is Option 2 on the Menu. 
 3. As a first time user, I want to find the leaderboard.
-    * Within the game container above the Rock paper Scissors hand gesture emojis there is a scoreboard. The score board shows the player score and the computer score side by side. The game is first to 5 wins.
+    * After the Player inserts there name a Main Menu will appear with 3 options to choose, The Leaderboard section is Option 3 on the Menu. 
 4. As a first time user, I want to prompted on what to do next after every turn.
-    * When the user is playing the game and deciding on what gesture to pick wether its Rock paper or scissors, The user will see the gestures hover when they put the mouse pointer over it. When the player decides and clicks the chosen hand the hand will glow a color of green for win, Red for lose or Orange for draw. Text above the emjois will also tell player the result of the round and will be coloured the same as the hand gesture with the result. The game is first to 5 so when either the player or computer gets to 5 the user will be met witrh an alert box stating if they have won, lost or drawn and will reset the game to 0-0 when the user presses ok. 
+    * When the user is playing the game and a text promp will state firstly which Row they would like to choose 1-8 and when decision made they will be prompted to choose which column they would like to choose. When the choice has been made they will be notified if they have hit any of the computer ships or if they have missed. They will then be met with a "Computers Turn" text and the computer will make a random guess. The result of hit or miss will be shown to the player then asell. Then the sequnce will repeat until all ships are hitbby either the Player or Computer or until the players turns are all used. This will be end of the game.   
 5. As a first time user, I want to be able to see the current score in the match. 
-    * Below the hand gestures there is a button that says "reset". This button will return the game to 0-0 when clicked. There is a hover effect on the button and it changes red like a warning to indicate to the player that the game will be over if pressed.
+    * When the user and the computer have both guessed there Row and Column, The Players Score and Computer score will be shown to let the player know if they are winning or losing so far in the game. 
 6. As a first time user, I want to be notified when I win, lose or draw the game at the end.
-    * Below the hand gestures there is a button that says "reset". This button will return the game to 0-0 when clicked. There is a hover effect on the button and it changes red like a warning to indicate to the player that the game will be over if pressed.
-7. As a first time user, I want to have the ability to reset game if I want.
-    * Below the hand gestures there is a button that says "reset". This button will return the game to 0-0 when clicked. There is a hover effect on the button and it changes red like a warning to indicate to the player that the game will be over if pressed.
+    * When the user and the computer have both used up all 10 turns, The Players Score and Computer score will be shown to let the player know if they have won or lost the game.If the Player or computer sink all there opponents ships first before turns run out, The game will also end and result prompted. 
 <br>
 
 #### Returning User
-8. As a returning user, I want a reminder on the game rules.
-    * Similar to the first time the user has visited, The user will be met with a "Main Menu" to navigate them to the How to Playe Section with the rules of the game and how to play. 
-9. As a returning user, I want to enjoy the game like the first time I visited ther site.
+7. As a returning user, I want a reminder on the game rules.
+    * Similar to the first time the user has visited, The user will be met with a "Main Menu" to navigate them to the How to Play Section with the rules of the game and how to play. 
+8. As a returning user, I want to enjoy the game like the first time I visited ther site.
     * Battleships is fun and exciting game to play. The game encourages playing with its User friendly experience and is for people of all ability and ages.The user will be able to navigate the game easily and understand the interface and allow the player to enjoy the game.
 
 #### Site Owner 
-10.  As the site owner, Provide clear details on how to play the game.
+9.  As the site owner, Provide clear details on how to play the game.
     * On initial loading of the page, The creator / owner has set a pop up box over the game container. The pop up box show the rules to the game Rock paper Scissors and also shows what hand beats what hand so the user will gain the understanding on how to win or lose.
-11. As the site owner, Provide the ability to insert your name into the game to make it more interactive to the player.
+10. As the site owner, Provide the ability to insert your name into the game to make it more interactive to the player.
     * On initial loading of the page, The creator / owner has set a pop up box over the game container. This popup box has the rules of the game but also at the bottom it has a text box prompting the user to insert there name and press the fight button. The value entered in the text box will be shown within the game container and the name/value will be set beside the players score.
-12. As the site owner, Provide a user frindly interface and enjoyable experience.
+11. As the site owner, Provide a user frindly interface and enjoyable experience.
     * The game is visually striking with the color pallette chosen to highlight and bring forward all buttons and Hand gesture so that the visitor will enjoy the experience with the game. The website encourages playing with its User friendly experience and is set up for people of all abilities and ages to have fun.
-13. As the site owner, Provide the ability to see the score in the current match after every turn.
+12. As the site owner, Provide the ability to see the score in the current match after every turn.
     * Within the game container above the Rock paper Scissors hand gesture emojis there is a scoreboard. The score board shows the player score and the computer score side by side. The game is first to 5 wins.
-14. As the site owner, Provide clear indication if the player has hit or miss the computers ship.
+13. As the site owner, Provide clear indication if the player has hit or miss the computers ship.
     * When the player decides and clicks the chosen hand, the hand will glow a color of green for win, Red for lose or Orange for draw. Text above the emjois will also tell player the result of the round and will be coloured the same as the hand gesture with the result.  
-15. As the site owner, Provide clear indication if the computer has hit or miss the players ship.
+14. As the site owner, Provide clear indication if the computer has hit or miss the players ship.
     * The game is first to 5 so when either the player or computer gets to 5 the user will be met with an alert box stating if they have won or lost and will reset the game to 0-0 when the user presses ok.
-16. As the site owner, Provide clear indication on who wins or losses the match. 
+15. As the site owner, Provide clear indication on who wins or losses the match. 
     start again at 0-0.
     * There is reset button located at the bottom of the game container area. When pressed this will end the current game and reset the score to 0-0.
-17. As the site owner, Provide the player the a map of locations of the computer ships they missed in the game.
+16. As the site owner, Provide the player the a map of locations of the computer ships they missed in the game.
     start again at 0-0.
     * There is reset button located at the bottom of the game container area. When pressed this will end the current game and reset the score to 0-0.
 ---
