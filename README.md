@@ -81,7 +81,7 @@ the visitor to return to play again.
 1. As a first time user, I want to add my name into game to make it a more personal experience.
 2. As a first time user, I want to find understand the rules to the Game.
 3. As a first time user, I want to find the leaderboard.
-4. As a first time user, I want to prompted on what to do next after every turn.
+4. As a first time user, I want to prompted on what to do next after every turn or Input error.
 5. As a first time user, I want to be able to see the current score in the match.
 6. As a first time user, I want to be notified when I win, lose or draw the game at the end.
 
@@ -122,38 +122,96 @@ The Battleships has been presented in a User friendly and easily navigated way. 
 - <a href="https://openai.com/blog/chatgpt">Chat GPT</a> Assist with checking Python Code functionality.
 
 
-<!-- ## Features
-The website consists of a main home page hosting the Rock Paper Scissors game and a Popup screen explaining the rules of the game and textbox for entering the players name.
+## Features
+The website consists of a main home page hosting the Battleships game.
 
-### PopUp Box
-- The Popup box appears on first load of the page on top of the game area.
-- The Popup box coloring is the same as the game container to encourage continuity throughout the page.
-- The Popup box has a enter name textbox at the bottom to allow for the site visitor to enter there name so the value of this textbox will be entered in the game area at the player score section.
-- The Popup box has a enter name textbox at the bottom and has an focus event set. This allows the user the ability to type straight into the textbox area without having to click into the textbox. 
-- The "Lets Fight" button located at the bottom of the page is linked with a function as to when the user enters there name and clicks it the Popup box will dissappear and the event listener click on the button runs the game function for the user to play.
-- The Popup box is responsive to different screen sizes to assist with playing on different devices.
-- User Stories Covered: 1, 2, 5, 7, 8 and 9
+### Welcome Screen and Name Input
+- The header appears with the welcome to Battleships Message.
+- The player will be greeted with a text based image of a ship in water
+- The "Enter name here" text is displayed prompting the player to enter name of player when the player presses enter they will move to the menu page.
+- User Stories Covered: 1, 4, 9, and 10
+<br>
+<details>
+<summary>Welcome Screen</summary>
+<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/home_screen_name.png" alt='Welcome Screen with Boat text image'>
+</details>
+<br>
 
-
-![Popup Box](/assets/images/onload_popup.png)
-
-### Scoring Area
-- The scoring area player name is entered from the Popup box on first page load. This box allows the scoring section to display the "players name" Score.
-- The scoring area displays the current score of each hand from both the Player and the Computer. The scores increment after every hand to show the current game score on the race to first to 5 wins.
-- The Scoring Area is responsive to different screen sizes to assist with playing on different devices.
-- User Stories Covered: 3, 10 and 11
-
-
-![Scoring Area](/assets/images/scoring_area.png)
+### Main Menu
+- When the player enters there name a main menu will pop up with choices on how you would like to proceed.
+- The Player will be shown 3 choices of Play Game, Read Rules or Look up Leaderboard.
+- The player will be prompted to enter there choice on which option they would like to do.
+- If choice is Invalid they will be prompted to try "invalid Choice Enter 1,2 or 3".
+- If the Player picks 2 they will be brought to the rules page and when finished reading will be prompted to press enter to go back to the Main Menu.
+- If the Player picks 3 they will be shown the current leaderboard and when finished reading will be prompted to press enter to go back to the Main Menu.
+- User Stories Covered: 2, 3, 4, 7 and 11
+<br>
+<details>
+<summary>Main Menu</summary>
+<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/main_menu.png" alt='Main Menu'>
+</details>
+<br>
+<details>
+<summary>Menu Invalid Choice Error</summary>
+<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/menu_invalid_choice.png" alt='Main Menu inavlid choice error'>
+</details>
+<br>
+<details>
+<summary>Rules Page</summary>
+<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/game_rules_page.png" alt='Rules Page'>
+</details>
+<br>
+<details>
+<summary>Leaderboard</summary>
+<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/leaderboard_page.png" alt='Leaderboard printed to terminal'>
+</details>
+<br>
 
 ### Game Area
-- The game areas Rock Paper and Scissors Hand Emojis have a hover effect when the mouse is over it to show which hand you may select.
-- Above the Rock Paper Sciccors Hand Emojis there is text to show you the result of the hand just played. The text color changes with the result of the round. Green for Win, Red for loss and Orange for Draw.
-- The game areas Rock Paper and Scissors Hand Emojis have an result color glow when clicked to show the round result. Green for Win, Red for loss and Orange for Draw.
-- The Game Area is responsive to different screen sizes to assist with playing on different devices.
+- The player will be met with a blank grid and a prompt for them to pick ship row 1-8 and ship column A-H.
+- When the player guesses a row and column they are prompted with message telling them if they have hit or miss a ship. The players grid will be marked with either an "X" for hit or a "-" for miss. The player will be prompted with message saying you have already guessed here if they try to pick same position twice.
+- The Computer then will make a guess and the player will be prompted with the outcome of the computers guess. 
+- When the Player and Computer both have guessed they will be notified of the current scores.
+- When both Players have used up all shots the Gam Over message will prompt and show the final score of the game.
+- When the game is over the computer grid will be shown to show the positions of the ships the player missed.
 - User Stories Covered: 4, 9 and 11
+<br>
+<details>
+<summary>Players grid</summary>
+<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/player_first_blank_grid.png" alt='Player grid blank ready for guess'>
+</details>
+<br>
+<details>
+<summary>Players Guess</summary>
+<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/player_guess_hit.png" alt='Player Guess Hit'>
+</details>
+<br>
+<details>
+<summary>Duplicate Guess</summary>
+<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/duplicate_guess.png" alt='error message saying i already guessed this position'>
+</details>
+<br>
+<details>
+<summary>Players Hit on Grid</summary>
+<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/hit_on_grid.png" alt='Player Guess Hit on Grid'>
+</details>
+<br>
+<details>
+<summary>Computer Guess and Current Scores</summary>
+<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/comp_guess_with_scores.png" alt='Comp Guess and results of the match so far'>
+</details>
+<br>
+<details>
+<summary>Game Over and Final Score</summary>
+<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/game_over_final_score.png" alt='Game over message and final score of match'>
+</details>
+<br>
+<details>
+<summary>Players missed ships</summary>
+<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/player_missed_ships.png" alt='Positions of the ships the player missed'>
+</details>
+<br>
 
-![Game Area](/assets/images/hovering_hand_win.png)
 
 ### Game Reset
 - The "Reset Game" button has a hover effect to change color to red for when the player puts the pointer on it. This red color indicates as a warning that if pressed the current game will end and the scores will return to 0-0.
@@ -171,7 +229,7 @@ The website consists of a main home page hosting the Rock Paper Scissors game an
 
 ![Game Over PopUp](/assets/images/game_over_popup.png)
 
---- -->
+---
 
 ## Validation
 <br>
