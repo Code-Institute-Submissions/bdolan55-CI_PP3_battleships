@@ -30,7 +30,6 @@ class WelcomeScreen():
     Rules function and Leaderboard function.
 
     """
-
     def __init__(self):
         pass
 
@@ -75,7 +74,7 @@ class WelcomeScreen():
         """
         if choice == "1":
             print(Fore.YELLOW + "Loading Game", end="")
-            for choice in range(1):
+            for choice in range(5):
                 time.sleep(.5)
                 print(".", end="", flush=True)
             self.run_game()
@@ -297,7 +296,7 @@ class RunGame():
             user_guess_board.board[user_x_row][user_y_column] = "-"
             player_guess_board.board[user_x_row][user_y_column] = "-"
         # check for win or lose
-        if Battleship.count_hit_ships(user_guess_board) == 30:
+        if Battleship.count_hit_ships(user_guess_board) == 5:
             print(Fore.GREEN + "You hit all Computers battleships!!")
             break
         else:
@@ -343,7 +342,7 @@ class RunGame():
             score_2 = Battleship.count_hit_ships(computer_board)
             print(Fore.GREEN + "Computer Score: " + str(score_2))
             # check for win or lose
-        elif Battleship.count_hit_ships(computer_board) == 30:
+        elif Battleship.count_hit_ships(computer_board) == 5:
             print(Fore.RED + "Game Over - Computer hit all your battleships!")
             GameBoard.print_board(computer_board)
             break
