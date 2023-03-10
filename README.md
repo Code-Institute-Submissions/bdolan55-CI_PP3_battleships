@@ -106,6 +106,17 @@ the visitor to return to play again.
 ### Structure
 The Battleships has been presented in a User friendly and easily navigated way. On running of the Balleship programs you will be met with visual que of a ship and also be prompted to enter your name. When the name is entered you will be guided to the "Main Menu" of the game. At the Main Menu, the player will be prompted to make a selection from the 3 options. The 3 options available are Play Game, Read Rules or See leaderboard. When you enter the Play Game section of the game, there is a 8x8 Grid broken into 2 selections 1-8 for Row and A-H for column, The player will then be prompted to make there row and column selection ex. A1,C5,E6,G8 etc.. The players guess will be then cross referenced with the Computers random generated ship locations and prompt the Player if they have hit or miss the Computers ship. The outcome of the guess will be then shown back to player. The computer will make a gues on the players random generated ship and the result of the computers guess will also be prompted to the player. After each round a score board will be appear and show how many ship hits the player and the computer have so far. The Player and Computer will have 10 guesses to hit all eachothers ships. After 10 turns the player will be prompted with a note saying that they have 0 turns remaining and it is Game Over. The Final scores of the Player and Computer will be shown to detrmine the winner. At the very end of the game, The computers board will be shown to the player to show the locations of the remaing ships that the player has not hit. The objective of the game is to sink all of your opponents ships. When either the Player or the Computer hit all the opponents ships they will be prompted that they have won as they have hit all ships.
 
+<br>
+<br>
+
+### Battleships Flowchart
+The Battleships Game Flowchart created with LucudChart.
+
+<summary>Battleships Flowchart</summary>
+<img src="/workspace/CI_PP3_battleships/assets/Flowchart/Battleships Flow Chart.png">
+
+
+<br>
 ---
 
 ## Technologies Used
@@ -120,6 +131,7 @@ The Battleships has been presented in a User friendly and easily navigated way. 
 - <a href="https://pep8ci.herokuapp.com/">Code Institute Python Linter</a> - Online Python error checker.
 - <a href="https://asciiart.website/index.php?art=transportation/nautical">ASCII Art</a> - Welcome Page Ship Art
 - <a href="https://openai.com/blog/chatgpt">Chat GPT</a> Assist with checking Python Code functionality.
+- <a href="https://www.lucidchart.com">LucidChart</a> Creation of Flowchart for Battleships.
 
 
 ## Features
