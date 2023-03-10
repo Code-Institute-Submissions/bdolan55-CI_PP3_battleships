@@ -183,7 +183,7 @@ class Battleship:
         random row and column values until a valid position is found.
         The position is marked on the board with an "O" character.
         """
-        for i in range(20):
+        for i in range(10):
             x_row, y_column = random.randint(0, 7),\
                 random.randint(0, 7)
             while self.board[x_row][y_column] == "O":
@@ -198,7 +198,7 @@ class Battleship:
         random row and column values until a valid position is found.
         The position is marked on the board with an "." character.
         """
-        for i in range(20):
+        for i in range(10):
             self.x_row, self.y_column = random.randint(0, 7),\
                 random.randint(0, 7)
             while self.board[self.x_row][self.y_column] == ".":
@@ -296,7 +296,7 @@ class RunGame():
             user_guess_board.board[user_x_row][user_y_column] = "-"
             player_guess_board.board[user_x_row][user_y_column] = "-"
         # check for win or lose
-        if Battleship.count_hit_ships(user_guess_board) == 5:
+        if Battleship.count_hit_ships(user_guess_board) == 10:
             print(Fore.GREEN + "You hit all Computers battleships!!")
             break
         else:
@@ -342,7 +342,7 @@ class RunGame():
             score_2 = Battleship.count_hit_ships(computer_board)
             print(Fore.GREEN + "Computer Score: " + str(score_2))
             # check for win or lose
-        elif Battleship.count_hit_ships(computer_board) == 5:
+        elif Battleship.count_hit_ships(computer_board) == 10:
             print(Fore.RED + "Game Over - Computer hit all your battleships!")
             GameBoard.print_board(computer_board)
             break
