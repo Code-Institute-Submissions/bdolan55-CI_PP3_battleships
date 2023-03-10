@@ -165,17 +165,17 @@ The website consists of a main home page hosting the Battleships game.
 <br>
 <details>
 <summary>Menu Invalid Choice Error</summary>
-<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/menu_invalid_choice.png" alt='Main Menu inavlid choice error'>
+<img src="assets/features_screenshots/menu_invalid_choice.png" alt='Main Menu inavlid choice error'>
 </details>
 <br>
 <details>
 <summary>Rules Page</summary>
-<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/game_rules_page.png" alt='Rules Page'>
+<img src="assets/features_screenshots/game_rules_page.png" alt='Rules Page'>
 </details>
 <br>
 <details>
 <summary>Leaderboard</summary>
-<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/leaderboard_page.png" alt='Leaderboard printed to terminal'>
+<img src="assets/features_screenshots/leaderboard_page.png" alt='Leaderboard printed to terminal'>
 </details>
 <br>
 
@@ -190,37 +190,37 @@ The website consists of a main home page hosting the Battleships game.
 <br>
 <details>
 <summary>Players grid</summary>
-<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/player_first_blank_grid.png" alt='Player grid blank ready for guess'>
+<img src="assets/features_screenshots/player_first_blank_grid.png" alt='Player grid blank ready for guess'>
 </details>
 <br>
 <details>
 <summary>Players Guess</summary>
-<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/player_guess_hit.png" alt='Player Guess Hit'>
+<img src="assets/features_screenshots/player_guess_hit.png" alt='Player Guess Hit'>
 </details>
 <br>
 <details>
 <summary>Duplicate Guess</summary>
-<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/duplicate_guess.png" alt='error message saying i already guessed this position'>
+<img src="assets/features_screenshots/duplicate_guess.png" alt='error message saying i already guessed this position'>
 </details>
 <br>
 <details>
 <summary>Players Hit on Grid</summary>
-<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/hit_on_grid.png" alt='Player Guess Hit on Grid'>
+<img src="assets/features_screenshots/hit_on_grid.png" alt='Player Guess Hit on Grid'>
 </details>
 <br>
 <details>
 <summary>Computer Guess and Current Scores</summary>
-<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/comp_guess_with_scores.png" alt='Comp Guess and results of the match so far'>
+<img src="assets/features_screenshots/comp_guess_with_scores.png" alt='Comp Guess and results of the match so far'>
 </details>
 <br>
 <details>
 <summary>Game Over and Final Score</summary>
-<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/game_over_final_score.png" alt='Game over message and final score of match'>
+<img src="assets/features_screenshots/game_over_final_score.png" alt='Game over message and final score of match'>
 </details>
 <br>
 <details>
 <summary>Players missed ships</summary>
-<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/player_missed_ships.png" alt='Positions of the ships the player missed'>
+<img src="assets/features_screenshots/player_missed_ships.png" alt='Positions of the ships the player missed'>
 </details>
 <br>
 
@@ -246,7 +246,7 @@ Overall, by following these steps, I was able to ensure that my Battleships game
 The Battleships Game website was tested for Python errors using CI Python Linter.The Battleships Game Python code has passed CI Python Linter testing with no errors recorded.
 
 <details><summary>CI Python Linter Result</summary>
-<img src="/workspace/CI_PP3_battleships/assets/testing_screenshots/ci_python_linter_test.png">
+<img src="assets/testing_screenshots/ci_python_linter_test.png">
 </details>
 
 <br>
