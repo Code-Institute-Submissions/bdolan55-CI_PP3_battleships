@@ -24,20 +24,22 @@ Once a ship has been hit on all of its squares, the player who hit the ship anno
     1. [Target Audience](#target-audience)
     2. [User Requrements and Expectations](#user-requrements-and-expectations)
     3. [User Stories](#user-stories)
+    4. [Structure](#structure)
+    5. [Flowchart](#battleships-flowchart)
 3. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
     2. [Frameworks & Tools](#frameworks-&-tools)
 5. [Features](#features)
-6. [Testing](#validation)
-    1. [Manual Testing](#Manual-Testing)
-    2. [CI Python Linter](#CI-python-linter)
+6. [Testing & Validation](#validation)
+    1. [Manual Testing](#manual-testing)
+    2. [CI Python Linter](#ci-python-linter)
     3. [Performing tests on various devices](#performing-tests-on-various-devices)
     4. [Browser compatibility](#browser-compatability)
     5. [Testing User Goals](#testing-user-goals)
-8. [Bugs and Future Works](#Bugs-and-Future-Works)
+8. [Bugs and Future Works](#bugs-and-future-works)
 9. [Deployment](#deployment)
 10. [Credits](#credits)
-11. [Acknowledgement](#acknowledgement)
+11. [Acknowledgement](#acknowledgment)
 
 ## Project Goals 
 
@@ -366,7 +368,7 @@ In order of appearance:
 - <a href="https://realpython.com/python-sleep/">Real Python</a> to assist in using Time dealys within Python Code.
 - <a href="https://www.w3schools.com/python/default.asp">W3 Schools</a> was used to assist me in small programming methods I had throughout the entire Project. 
 - <a href="https://www.youtube.com/watch?v=u51Zjlnui4Y">Tech with Tim</a> video was used to assist on the ability to use colorama within my python project. 
-- <a href="https://stackoverflow.com/questions/48881196/how-can-i-split-up-a-long-f-string-in-python"></a>Stack Overflow</a> to assist in how to split f-string lines that are too long. 
+- <a href="https://stackoverflow.com">Stack Overflow</a> to assist in how to split f-string lines that are too long.  
 - <a href="https://openai.com/blog/chatgpt">Chat GPT</a> to assist in checking code methods and as a reference to show where i have gone wrong with some Python code.
 - <a href="https://learn.codeinstitute.net/ci_program/diplomainsoftwaredevelopmentecomm">Code Institute</a> Software development course was used to assist me in small programming methods I had throughout the entire Project through the well taught and informative Tutorials. I also used the Love Sandwiches tutorials to learn how to Install Gspread and link to external Gsheet.
 
