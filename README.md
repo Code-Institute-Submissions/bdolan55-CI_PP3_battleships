@@ -145,7 +145,7 @@ The website consists of a main home page hosting the Battleships game.
 <br>
 <details>
 <summary>Welcome Screen</summary>
-<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/home_screen_name.png" alt='Welcome Screen with Boat text image'>
+<img src="assets/features_screenshots/home_screen_name.png" alt='Welcome Screen with Boat text image'>
 </details>
 <br>
 
