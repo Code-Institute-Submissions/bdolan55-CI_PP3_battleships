@@ -1,7 +1,7 @@
 # Battleships Python Game
 (Developer: Brian Dolan)
 
-![Mockup image](./assets/images/am_i_responsive.png)
+![Mockup image](./assets/am_i_responsive_battleships.png)
 
 # Battleships
 Battleships is a two-player guessing game that is typically played on a square grid. Each player has their own grid on which they place a number of "ships" throughout the grid for the opponent to guess location, without the other player being able to see where they are placed.
@@ -12,7 +12,7 @@ If a player's guess hits an opponent's ship, the opponent must say "hit" or "you
 
 Once a ship has been hit on all of its squares, the player who hit the ship announces that they have "sunk" the ship. The game continues until one player has sunk all of their opponent's ships and declared the winner.
 
-[Live webpage](https://bdolan55.github.io/CI_PP2_rock_paper_scissors/)
+[Live webpage](https://battleships-ci-pp3-portfolio3.herokuapp.com/)
 
 
 ## Table of Content
