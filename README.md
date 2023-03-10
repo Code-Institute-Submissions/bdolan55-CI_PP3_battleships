@@ -174,7 +174,7 @@ The website consists of a main home page hosting the Battleships game.
 - When the Player and Computer both have guessed they will be notified of the current scores.
 - When both Players have used up all shots the Gam Over message will prompt and show the final score of the game.
 - When the game is over the computer grid will be shown to show the positions of the ships the player missed.
-- User Stories Covered: 4, 9 and 11
+- User Stories Covered: 4, 5, 6, 12, 13 14, 15 and 16
 <br>
 <details>
 <summary>Players grid</summary>
@@ -211,23 +211,6 @@ The website consists of a main home page hosting the Battleships game.
 <img src="/workspace/CI_PP3_battleships/assets/features_screenshots/player_missed_ships.png" alt='Positions of the ships the player missed'>
 </details>
 <br>
-
-
-### Game Reset
-- The "Reset Game" button has a hover effect to change color to red for when the player puts the pointer on it. This red color indicates as a warning that if pressed the current game will end and the scores will return to 0-0.
-- When the player presses the "Reset Game" button this will trigger a function to reset the game scores to 0-0 and start again.
-- The Game Reset button is responsive to different screen sizes to assist with playing on different devices.
-- User Stories Covered: 5, 9 and 13.
-
-
-![Game Reset](/assets/images/reset_btn.png)
-
-### Game Over PopUp
-- When a game is complete and either the Player or the computer reaches 5 first a PopUp box alert come on the screen to notify the player of the result.
-- When the OK button is clicked on the PopUp alert box it resets the game to 0-0 and allows the player to play the game again.
-- User Stories Covered: 4 , 9  and 12.
-
-![Game Over PopUp](/assets/images/game_over_popup.png)
 
 ---
 
