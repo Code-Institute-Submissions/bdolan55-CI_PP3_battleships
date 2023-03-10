@@ -234,7 +234,7 @@ Overall, by following these steps, I was able to ensure that my Battleships game
 The Battleships Game website was tested for Python errors using CI Python Linter.The Battleships Game Python code has passed CI Python Linter testing with no errors recorded.
 
 <details><summary>CI Python Linter Result</summary>
-<img src="">
+<img src="/workspace/CI_PP3_battleships/assets/testing_screenshots/ci_python_linter_test.png">
 </details>
 
 <br>

@@ -1,7 +1,8 @@
 # Function of the Game and code was inspired and altered
 # from https://www.youtube.com/watch?v=alJH_c9t4zw by Knowledge Mavens
 """
-Python inbuilt random module to make reandom selection
+Python inbuilt random module to make reandom selection and import colorama
+for color on text
 """
 import random
 import time
@@ -288,16 +289,16 @@ class RunGame():
             user_x_row, user_y_column = Battleship.get_user_input(object)
         # Check to see for a Hit or miss from your guess
         if user_guess_board.board[user_x_row][user_y_column] == "O":
-            print(Fore.GREEN + "You sunk 1 of my battleships!!!")
+            print(Fore.GREEN + "You have sunk 1 of the computers battlesips")
             user_guess_board.board[user_x_row][user_y_column] = "X"
             player_guess_board.board[user_x_row][user_y_column] = "X"
         else:
-            print(Fore.RED + "You missed my battleship!")
+            print(Fore.RED + "You missed the computer battleship!")
             user_guess_board.board[user_x_row][user_y_column] = "-"
             player_guess_board.board[user_x_row][user_y_column] = "-"
         # check for win or lose
         if Battleship.count_hit_ships(user_guess_board) == 30:
-            print(Fore.GREEN + "You hit all my battleships!!")
+            print(Fore.GREEN + "You hit all Computers battleships!!")
             break
         else:
             TURNS -= 1
@@ -335,7 +336,7 @@ class RunGame():
             # print(Fore.RED + "I already guessed that!")
             computer_x_row, computer_y_column = Battleship.get_computer_input()
         if computer_board.board[computer_x_row][computer_y_column] == ".":
-            print(Fore.RED + "I hit one of your battleships!")
+            print(Fore.RED + "I hit one of the Players battleships!")
             computer_board.board[computer_x_row][computer_y_column] = "X"
             score_1 = Battleship.count_hit_ships(user_guess_board)
             print(Fore.GREEN + "Player Score: " + str(score_1))
@@ -343,11 +344,11 @@ class RunGame():
             print(Fore.GREEN + "Computer Score: " + str(score_2))
             # check for win or lose
         elif Battleship.count_hit_ships(computer_board) == 30:
-            print(Fore.RED + "Game Over - I hit all your battleships!")
+            print(Fore.RED + "Game Over - Computer hit all your battleships!")
             GameBoard.print_board(computer_board)
             break
         else:
-            print(Fore.YELLOW + "I missed!")
+            print(Fore.YELLOW + "I missed the players battleships!")
             computer_board.board[computer_x_row][computer_y_column] = "-"
             score_1 = Battleship.count_hit_ships(user_guess_board)
             print(Fore.GREEN + "Player Score: " + str(score_1))
