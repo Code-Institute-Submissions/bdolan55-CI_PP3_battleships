@@ -1,3 +1,6 @@
+"""
+Python inbuilt random module to make reandom selection
+"""
 import random
 import time
 import colorama
@@ -18,7 +21,12 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("battleship_leaderboard")
 
 
-class welcome_screen():
+class WelcomeScreen():
+    """
+    Welcome screen class containing the menu choice functions,
+    Rules function and Leaderboard function.
+
+    """
 
     def __init__(self):
         pass
@@ -47,12 +55,21 @@ class welcome_screen():
         print(f"{Fore.GREEN}Welcome to the game of Battleships {name} ")
 
     def display_menu(self):
+        """
+        Function to print Menu for game in sequence for the choice function
+        to handle the player decision.
+        """
         print(Fore.WHITE + "What would you like to do?")
         print("1. Play Game")
         print("2. Read Rules")
         print("3. Look at Leaderboard")
 
     def handle_choice(self, choice):
+        """
+        This function displays Game Menu.
+        The function takes in a choice parameter, which is a string
+        representing the user's choice of action.
+        """
         if choice == "1":
             print(Fore.YELLOW + "Loading Game", end="")
             for choice in range(1):
@@ -76,39 +93,70 @@ class welcome_screen():
             self.get_choice()
 
     def get_choice(self):
+        """
+        Function handles the player input and relays input to
+        handle choice function
+        """
         choice = input("Enter your choice (1, 2, or 3): \n")
         self.handle_choice(choice)
 
     def run_game(self):
+        """
+        Function runs a loading message to terminal when player
+        chooses run Game handle choice function
+        """
         print(Fore.GREEN + "\nLoading Complete!! \n")
         time.sleep(2)
 
     def read_rules(self):
+        """
+        Function runs the rules.txt file and displays
+        the rules to the terminal
+        """
         with open("rules.txt", "r") as f:
             print(f.read())
 
     def look_at_leaderboard(self):
+        """
+        Function runs sends a request to the leaderboard Gsheet linked
+        and loads the leaderboard into the terminal for player to view.
+        """
         leaderboard_1 = SHEET.worksheet("leaderboard_1")
         data = leaderboard_1.get_all_values()
         print(data)
 
 
-menu = welcome_screen()
+menu = WelcomeScreen()
 menu.display_menu()
 menu.get_choice()
 
 
 class GameBoard:
+    """
+    GameBoard class is conatins the functions and methods to
+    to build the GameBoard/Grid.
+    """
     def __init__(self, board):
         self.board = board
 
     @staticmethod
     def get_char_to_num():
+        """
+        Method that returns a dictionary that maps the column letters
+        of the Gameboard (A-H) to their corresponding
+        numbers (0 to 7).
+        """
         char_to_num = \
             {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6, "H": 7}
         return char_to_num
 
     def print_board(self):
+        """
+        Prints the Game board to the console. The method prints the column
+        letters on the first row, and then prints each row of the Game
+        board, separated by pipes (|) and with the row number printed
+        at the beginning of each row. .
+        """
         print("  A B C D E F G H")
         print("  ---------------")
         row_number = 1
@@ -118,6 +166,10 @@ class GameBoard:
 
 
 class Battleship:
+    """
+    Handles the function to randomly place ships throughout the game and
+    handles the players choice.  .
+    """
     def __init__(self, board):
         self.board = board
 
@@ -262,7 +314,7 @@ class RunGame():
 
 
 def main_game_run():
-    welcome_screen()
+    WelcomeScreen()
     RunGame()
 
 
