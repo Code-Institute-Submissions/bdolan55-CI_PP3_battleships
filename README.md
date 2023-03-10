@@ -113,7 +113,7 @@ The Battleships has been presented in a User friendly and easily navigated way. 
 The Battleships Game Flowchart created with LucudChart.
 
 <summary>Battleships Flowchart</summary>
-<img src="/workspace/CI_PP3_battleships/assets/Flowchart/Battleships Flow Chart.png">
+<img src="assets/Flowchart/Battleships Flow Chart.png">
 
 
 <br>
@@ -160,7 +160,7 @@ The website consists of a main home page hosting the Battleships game.
 <br>
 <details>
 <summary>Main Menu</summary>
-<img src="/workspace/CI_PP3_battleships/assets/features_screenshots/main_menu.png" alt='Main Menu'>
+<img src="assets/features_screenshots/main_menu.png" alt='Main Menu'>
 </details>
 <br>
 <details>
