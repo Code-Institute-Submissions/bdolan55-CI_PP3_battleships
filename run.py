@@ -167,23 +167,35 @@ class GameBoard:
 
 class Battleship:
     """
-    Handles the function to randomly place ships throughout the game and
-    handles the players choice.  .
+    Handles the functions to randomly place ships throughout the game and
+    handles the players input choice.
     """
-    def __init__(self, board):
+    def __init__(self, board, x_row, y_column):
         self.board = board
+        self.x_row = x_row
+        self.y_column = y_column
 
     def create_comp_ships(self):
+        """
+        Randomly places computer ships locations on the board by generating
+        random row and column values until a valid position is found.
+        The position is marked on the board with an "O" character.
+        """
         for i in range(20):
-            self.x_row, self.y_column = random.randint(0, 7),\
+            x_row, y_column = random.randint(0, 7),\
                 random.randint(0, 7)
-            while self.board[self.x_row][self.y_column] == "O":
-                self.x_row, self.y_column = random.randint(0, 7),\
+            while self.board[x_row][y_column] == "O":
+                x_row, y_column = random.randint(0, 7),\
                      random.randint(0, 7)
-            self.board[self.x_row][self.y_column] = "O"
+            self.board[x_row][y_column] = "O"
         return self.board
 
     def create_ships(self):
+        """
+        Randomly places players ships on the board by generating
+        random row and column values until a valid position is found.
+        The position is marked on the board with an "." character.
+        """
         for i in range(20):
             self.x_row, self.y_column = random.randint(0, 7),\
                 random.randint(0, 7)
@@ -194,6 +206,11 @@ class Battleship:
         return self.board
 
     def get_user_input(self):
+        """
+        Prompts the user to enter a row and column for their attack,
+        validates the input, and returns the corresponding row and
+        column indices on the board.
+        """
         while True:
             try:
                 x_row = input("Please enter a ship row 1-8: \n")
@@ -216,11 +233,18 @@ class Battleship:
 
     @staticmethod
     def get_computer_input():
+        """
+        Generates and returns random row and column for a computer attack.
+        """
         row = random.randint(0, 7)
         col = random.randint(0, 7)
         return row, col
 
     def count_hit_ships(self):
+        """
+        Returns the number of user ships that have been hit
+        and marked with an "X" on the board..
+        """
         hit_count = 0
         for row in self.board:
             for column in row:
@@ -230,6 +254,20 @@ class Battleship:
 
 
 class RunGame():
+    """
+    The Run game handles the above classes and functions and
+    enables the game play of the Game Battleships. Starts the game with
+    10 available turns. Prints the blank users guess game board to terminal,
+    Prompts the user to input there guess in row and column, Checks if the
+    input has been entered before and then prints back to terminal if it is
+    a hit or miss and how many turns remain. It then does the same above
+    randomly for the computers guess and prints to terminal if the computer
+    has hit or miss any of the players ships. After both the player and
+    computer have guessed it will print the current score to the terminal and
+    repeat the above until all turns are gone or all ships are hit. After
+    all turns have been taken a Game Over message will appear and shows
+    the final scores of the game for both player and computer.
+    """
     computer_board = GameBoard([[" "] * 8 for i in range(8)])
     user_guess_board = GameBoard([[" "] * 8 for i in range(8)])
     player_guess_board = GameBoard([[" "] * 8 for i in range(8)])
@@ -314,6 +352,10 @@ class RunGame():
 
 
 def main_game_run():
+    """
+    Runs both the Welcome screen class and Run Game class in
+    order of appearance for correct sequence.
+    """
     WelcomeScreen()
     RunGame()
 
