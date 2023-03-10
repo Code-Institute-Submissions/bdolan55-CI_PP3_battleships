@@ -10,7 +10,7 @@ The objective of the game is to guess the location of the other player's ships a
 
 If a player's guess hits an opponent's ship, the opponent must say "hit" or "you hit my battleship" and mark that spot on their own grid to indicate the hit. If a player's guess misses, the opponent must say "miss" and mark that spot on their own grid to indicate the miss.
 
-Once a ship has been hit on all of its squares, the player who hit the ship announces that they have "sunk" the ship. The game continues until one player has sunk all of their opponent's ships and declared the winner.
+Once a ship has been hit on all of its squares, the player who hit the ship announces that they have "sunk" the ship. The game continues until one player has sunk all of their opponent's ships and declared the winner or all turns are used and winner will be decide on who has the most hits.
 
 [Live webpage](https://battleships-ci-pp3-portfolio3.herokuapp.com/)
 
@@ -43,7 +43,7 @@ Once a ship has been hit on all of its squares, the player who hit the ship anno
 
 ### User Goals
 - I want to enter name to give the game a personal experience.
-- I want to play the game.
+- I want to be prompted on what to do as I play the game.
 - I want to read the rules of the game and how to play.
 - I want to see the current leaderboard of winners.
 - I want to see the current score after every guess.
@@ -104,7 +104,7 @@ the visitor to return to play again.
 ---
 
 ### Structure
-The Battleships has been presented in a User friendly and easily navigated way. On running of the Balleship programs you will be met with visual que of a ship and also be prompted to enter your name. When the name is entered you will be guided to the "Main Menu" of the game. At the Main Menu, the player will be prompted to make a selection from the 3 options. The 3 options available are Play Game, Read Rules or See leaderboard. When you enter the Play Game section of the game, there is a 8x8 Grid broken into 2 selections 1-8 for Row and A-H for column, The player will then be prompted to make there row and column selection ex. A1,C5,E6,G8 etc.. The players guess will be then cross referenced with the Computers random generated ship locations and prompt the Player if they have hit or miss the Computers ship. The outcome of the guess will be then shown back to player. The computer will make a gues on the players random generated ship and the result of the computers guess will also be prompted to the player. After each round a score board will be appear and show how many ship hits the player and the computer have so far. The Player and Computer will have 10 guesses to hit all eachothers ships. After 10 turns the player will be prompted with a note saying that they have 0 turns remaining and it is Game Over. The Final scores of the Player and Computer will be shown to detrmine the winner. At the very end of the game, The computers board will be shown to the player to show the locations of the remaing ships that the player has not hit. The objective of the game is to sink all of your opponents ships. When either the Player or the Computer hit all the opponents ships they will be prompted that they have won as they have hit all ships.
+The Battleships has been presented in a User friendly and easily navigated way. On running of the Battleship program you will be met with visual text image of a ship and also be prompted to enter your name. When the name is entered you will be guided to the "Main Menu" of the game. At the Main Menu, the player will be prompted to make a selection from the 3 options. The 3 options available are Play Game, Read Rules or See leaderboard. When you enter the Play Game section of the game, there is a 8x8 Grid broken into 2 selections 1-8 for Row and A-H for column, The player will then be prompted to make there row and column selection ex. A1,C5,E6,G8 etc.. The players guess will be then cross referenced with the Computers random generated ship locations and prompt the Player if they have hit or miss the Computers ship. The outcome of the guess will be then shown back to player. The computer will make a guess on the players random generated ship and the result of the computers guess will also be prompted to the player. After each round a score board will appear and show how many ship hits the player and the computer have so far. The Player and Computer will have 10 guesses to hit all eachothers ships. After 10 turns the player will be prompted with a note saying that they have 0 turns remaining and it is Game Over. The Final scores of the Player and Computer will be shown to detrmine the winner. At the very end of the game, The computers board will be shown to the player to show the locations of the remaing ships that the player has not hit. The objective of the game is to sink all of your opponents ships. When either the Player or the Computer hit all the opponents ships they will be prompted that they have won as they have hit all ships.
 
 <br>
 <br>
@@ -135,7 +135,7 @@ The Battleships Game Flowchart created with LucudChart.
 
 
 ## Features
-The website consists of a main home page hosting the Battleships game.
+The website consists of a Main home page hosting the Battleships game.
 
 ### Welcome Screen and Name Input
 - The header appears with the welcome to Battleships Message.
@@ -235,7 +235,7 @@ To test my Battleships game, I first checked that all the game's features were w
 
 Next, I tested the game's scoring system to ensure that it accurately updated the player's score and displayed the correct message when the player won or lost.
 
-To check for bugs and errors, I deliberately inputted incorrect data to try and break the game. For example, I tried to place a ship outside of the game board or hit the same spot twice. I also tested whether the game handled unexpected inputs and displayed helpful error messages.
+To check for bugs and errors, I deliberately inputted incorrect data to try and break the game. For example, I tried to pick a ship outside of the game board or hit the same spot twice. I also tested whether the game handled unexpected inputs and displayed helpful error messages.
 
 Overall, by following these steps, I was able to ensure that my Battleships game was reliable, easy to use, and provided an enjoyable experience for players playing against the computer.
 
@@ -275,7 +275,7 @@ The website was tested on the following browsers:
 3. As a first time user, I want to find the leaderboard.
     * After the Player inserts there name a Main Menu will appear with 3 options to choose, The Leaderboard section is Option 3 on the Menu. 
 4. As a first time user, I want to prompted on what to do next after every turn.
-    * When the user is playing the game and a text promp will state firstly which Row they would like to choose 1-8 and when decision made they will be prompted to choose which column they would like to choose A-H. When the choice has been made they will be notified if they have hit any of the computer ships or if they have missed. They will then be met with a "Computers Turn" text and the computer will make a random guess. The result of hit or miss will be shown to the player then asell. Then the sequnce will repeat until all ships are hitbby either the Player or Computer or until the players turns are all used. This will be end of the game.   
+    * When the user is playing the game and a text promp will state firstly which Row they would like to choose 1-8 and when decision made they will be prompted to choose which column they would like to choose A-H. When the choice has been made they will be notified if they have hit any of the computer ships or if they have missed. They will then be met with a "Computers Turn" text and the computer will make a random guess. The result of hit or miss will be shown to the player then asell. Then the sequnce will repeat until all ships are hit by either the Player or Computer or until the players turns are all used. This will be end of the game.   
 5. As a first time user, I want to be able to see the current score in the match. 
     * When the user and the computer have both guessed there Row and Column, The Players Score and Computer score will be shown to let the player know if they are winning or losing so far in the game. 
 6. As a first time user, I want to be notified when I win, lose or draw the game at the end.
@@ -289,14 +289,14 @@ The website was tested on the following browsers:
     * Battleships is fun and exciting game to play. The game encourages playing with its User friendly experience and is for people of all ability and ages.The user will be able to navigate the game easily and understand the interface and allow the player to enjoy the game.
 
 #### Site Owner 
-9.  As the site owner, Provide the ability to insert your name into the game to make it more interactive to the player.
+9.  As the site owner, Provide the ability to insert your name into the game to make it more        interactive to the player.
     * On initial loading of the page, The player will be met with a text image of a ship. When the ship loads below there will be a prompt for the Player to enter their name.
 10. As the site owner, Provide clear details on how to play the game..
     * The player enters their name and press Enter, A menu will then be loaded and will have 3 options to choose. 1. Play Game, 2. Rules and 3. Leaderboard. The player will be prompted to enter their prefered choice. The Player will press 2 to see the rules of the game and how to play.
 11. As the site owner, Provide a user frindly interface and enjoyable experience.
     * The game is set up with instructions at every step to navigate the player through the Battleship Game. The player will be prompted for name and choice, will be told when the selection is invalid and guide them on how get to the next step. This makes the experience of playing the game easy and fun. The prompts throughout the game will also keep the player update on the score and how many turns are remaining. 
 12. As the site owner, Provide the ability to see the score in the current match after every turn.
-    * When the player makes there move, The computer will automatically go next and the player and computer scpre will be shown after every turn to keep the player updated on the score and if they are winning or losing.
+    * When the player makes there move, The computer will automatically go next and the player and computer score will be shown after every turn to keep the player updated on the score and if they are winning or losing.
 13. As the site owner, Provide clear indication if the player has hit or miss the computers ship.
     * When the player decides on there Row selection 1-8 and also there column selection A-H the shot will be taken, below the Players selection they will be prompted if the guess is a hit, miss or a notification to guess again as they have already chosen that position already.  
 14. As the site owner, Provide clear indication if the computer has hit or miss the players ship.
@@ -309,9 +309,9 @@ The website was tested on the following browsers:
 
 ## Bugs and Future Works
 
-- I had an issue with adding of the Welcome message screen. I had original planned to have all menu choice within the 1 main welcome screen class on the welcome screen. I was recieving run errors and unable to proceed when choice made. I found if i broke the steps up into small functions within the main Welcome screen classes the program worked. I created a handle choice function that work on if, elif and else methods to progress through the welcome screen class. The choice handle menu decision would then run the corresponding fuction to bring the user to the requested location ie. Play Game, Rules or Leaderboard.
+- I had an issue with adding of the Welcome message screen. I had original planned to have all menu choice within the 1 main welcome screen class on the welcome screen. I was recieving run errors and unable to proceed when choice made. I found if i broke the steps up into small functions within the main Welcome screen classes the program worked. I created a handle choice function that work on if, elif and else methods to progress through the welcome screen class. The choice handle menu decision would then run the corresponding function to bring the user to the requested location ie. Play Game, Rules or Leaderboard.
 
-- I had an issue with the player and computer hit counts as I was originally planning to have a view of both the player and computers boards throughout the game. The Problem was that once I had the hit count set to 5 the game would end as the function was awaiting for either the Player or computer to reach 5 on there opponents board to state who won but both were already starting with 5 "X" markers on there board at as I had the ships for both the computer and the player ships set to "X". To counter this i changed the Players Ships to "." and the computers ships set to "O". When i changed these symbols the player ship guess is looking for an "O" and the Computer guess is looking for a ".". If the either of the player hit there corresponding symbol it would count as a hit and plot a "X" on that board.  
+- I had an issue with the player and computer hit counts as I was originally planning to have a view of both the player and computers boards throughout the game. The Problem was that once I had the hit count set to 5 the game would end as the function was awaiting for either the Player or computer to reach 5 on there opponents board to state who won but both were already starting with 5 "X" markers on there board at as I had the ships for both the computer and the player ships set to "X". To counter this i changed the Players Ships to "." and the computers ships set to "O". When i changed these symbols the player ship guess is looking for an "O" and the Computer guess is looking for a ".". If the either of the player hit there corresponding symbol it would count as a hit and plot a "X" on that board and position.  
 
 - I had an issue that when I was in the game section the ship guess symbol "." was showing up on my user board. When i went to run a guess on that grid spot it would come back to me as you already guessed this position or the game ran into an error and would end. To fix this problem I created a third board which was included with the user guess board if else statment and will be viewable to the player as a full blank board and not show either the computer ship locations or the user ship locations. Now the player has a full clean board at the start of the game and the "-" missed ship symbol and "X" Hit symbols will only show up on the grid as it is part of the user_guess board if else statement. 
 
@@ -319,7 +319,7 @@ The website was tested on the following browsers:
 
 - In a future update I would like the leaderboard external gsheet to update automatically with a most hits in least guesses and in the quickest time. Currently the leaderboard is static and does not update. The leaderboard option on the main menu does bring you to external gsheet currently and prints the manually entered scores to terminal.
 
-- In a future update I would like to add the option of placing your ships on the board and also add in 2,3 and 4 grid spot ships. The different type of ships could have differnt points scores and be added up at end of turns to give you a score recieved total.
+- In a future update I would like to add the option of placing your ships on the board and also add in 2,3 and 4 grid spot ships. The different type of ships could have different points scores and be added up at end of turns to give you a total score recieved total.
 
 ---
 
@@ -362,7 +362,7 @@ You can clone the repository by following these steps:
 ### Code used and adapted
 
 In order of appearance:
-- <a href="https://www.youtube.com/watch?v=alJH_c9t4zw">Knowledge Mavens</a> was used to understand The Battleships Python OOP formation and how to structure the code and have adapted functions to achieve the end result. Inspiration was also taken in sections of the page for design of my Battleships game.
+- <a href="https://www.youtube.com/watch?v=alJH_c9t4zw">Knowledge Mavens</a> was used to understand The Battleships Python OOP formation and how to structure the code and have I adapted functions and classes to achieve my end result. Inspiration was also taken in sections of the page for design of my Battleships game. The h=game linked is a 1 player game but I have completed a player vs Computer version.
 - <a href="https://realpython.com/python-sleep/">Real Python</a> to assist in using Time dealys within Python Code.
 - <a href="https://www.w3schools.com/python/default.asp">W3 Schools</a> was used to assist me in small programming methods I had throughout the entire Project. 
 - <a href="https://www.youtube.com/watch?v=u51Zjlnui4Y">Tech with Tim</a> video was used to assist on the ability to use colorama within my python project. 
