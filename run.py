@@ -1,3 +1,5 @@
+# Function of the Game and code was inspired and altered
+# from https://www.youtube.com/watch?v=alJH_c9t4zw by Knowledge Mavens
 """
 Python inbuilt random module to make reandom selection
 """
@@ -315,6 +317,8 @@ class RunGame():
                 print("See loactions of the Players missed ships below!")
                 print("")
                 GameBoard.print_board(user_guess_board)
+                print('')
+                print("To play again Click the Run progran button above!!")
                 break
 
         # Computer's turn
